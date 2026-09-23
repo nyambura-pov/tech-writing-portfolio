@@ -1,36 +1,98 @@
-# InSight Documentation Suite
+# InSight: Automated Cataract Screening System
 
-InSight is a clinical decision-support microservice that detects cataracts from ocular fundus imagery using a ResNet-18 Convolutional Neural Network (CNN) paired with Grad-CAM visual explainability.
+InSight is an open-source clinical decision-support microservice that detects cataracts from ocular fundus imagery. It pairs a **ResNet-18 Convolutional Neural Network (CNN)** for binary classification with **Grad-CAM visual saliency maps** to deliver explainable, interpretable triage recommendations.
 
-## Target Audiences & Documentation Scope
+## The Clinical Challenge and Solution
 
-This documentation suite serves two primary technical audiences:
+Cataracts remain the leading cause of preventable blindness worldwide, disproportionately impacting regions facing severe shortages of trained ophthalmologists.
 
-1. **Integration Engineers & Developers:** Guidance on deploying the FastAPI inference engine, managing container dependencies, and querying screening endpoints.
-2. **Clinical Technicians & Operators:** Operational workflows for uploading fundus scans, executing batch processing, and interpreting Grad-CAM saliency heatmaps.
+| Clinical Bottleneck | The InSight Implementation |
+| :--- | :--- |
+| **Delayed Diagnosis** | Automated screening enables rapid frontline patient triage by nurses and general practitioners. |
+| **"Black Box" AI Skepticism** | Diagnostic predictions include Grad-CAM saliency overlays to highlight anatomical regions of interest. |
+| **Non-Medical Input Errors** | A MobileNetV2 "Gatekeeper" layer intercepts and rejects non-retinal uploads before inference. |
+| **Workflow Disconnect** | Provides an end-to-end Clinical Decision Support System (CDSS) complete with automated PDF reports and audit logging. |
 
-## Architecture & System Flow
+## System Architecture
 
-![InSight Processing Pipeline and Architecture Flow](assets/insight-architecture.png)
+InSight separates heavy machine learning inference from the clinical presentation layer using a service-oriented architecture:
 
-## Planned Documentation Sections
+* **Presentation Layer:** Streamlit clinician dashboard providing single/batch upload queues, patient lookup, and analytics.
+* **Application Layer:** Asynchronous FastAPI backend managing the MobileNetV2 gatekeeper, PyTorch ResNet-18 model, and Grad-CAM computation.
+* **Data & Authentication Layer:** Supabase-managed PostgreSQL storage with Role-Based Access Control (RBAC) separating nurse and physician roles.
 
-### 1. Developer Quickstart & Installation
-* Environmental prerequisites (Python 3.9+, virtual environment isolation).
-* Service startup procedures (FastAPI backend + Streamlit frontend).
-* Local verification checks.
+![InSight Architecture Pipeline](assets/insight-architecture.png)
 
-### 2. API Reference & Data Contracts
-* `POST /predict/single`: Payload format, multi-part form parameters, and status responses (`200 OK`, `422 Unprocessable Entity`).
-* `POST /predict/batch`: Queue handling for multiple retinal scans.
-* Authentication & Role-Based Access Control (RBAC) headers via Supabase.
+## Quickstart & Local Setup
 
-### 3. Model Explainability & Interpretability Guide
-* Explanation of Grad-CAM heatmaps for non-ML engineers.
-* Clinical confidence scoring and triage thresholds.
+Follow these steps to run the inference backend and clinical interface locally.
 
-### 4. Troubleshooting & Known Error States
-* Common environment failures (PyTorch CUDA vs CPU mismatches, Supabase connection timeouts).
-* Resolution runbooks.
+### Prerequisites
 
+* Python 3.9+
+* Git
+
+### 1. Clone the Code Repository
+
+git clone https://github.com/nyambura-pov/InSight_Cataract_Detection.git
+cd InSight_Cataract_Detection
+
+### 2. Environment Setup & Dependencies
+
+```bash
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate # On Windows: .venv\Scripts\Activate.ps1
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+### 3. Configure Service Secrets
+
+Create a .streamlit/secrets.toml file in the project root:
+
+```toml
+[supabase]
+url = "[https://your-project-id.supabase.co](https://your-project-id.supabase.co)"
+key = "your-supabase-anon-key"
+```
+
+### 4. Launch Services
+
+Start the FastAPI inference engine:
+```bash
+uvicorn backend_app:app --reload --port 8000
+```
+
+In a second terminal window, launch the clinician dashboard:
+```bash
+streamlit run app.py
+```
+
+Access the interface locally at http://localhost:8501
+
+## Model Performance Benchmarks
+
+The core ResNet-18 model was trained on the ODIR-5K dataset using Focal Loss (γ = 2.0) to counteract severe class imbalance. Performance was evaluated on a held-out test split of 1,098 ocular fundus images:
+
+| Evaluation Metric | Test Score | Clinical Significance |
+| :--- | :--- | :--- |
+| **Recall (Sensitivity)** | **99.40%** | Minimizes false negatives; ensures active cataract cases are flagged for specialist triage. |
+| **Precision** | **99.00%** | Minimizes false positives, preventing unwarranted clinical burden on ophthalmologists. |
+| **Accuracy** | **99.52%** | High baseline reliability across diagnostic categories. |
+| **F1-Score** | **0.992** | Robust balance between precision and recall across skewed data distributions. |
+| **AUC-ROC** | **0.998** | High diagnostic discrimination between diseased and healthy ocular states. |
+
+
+## Documentation Modules
+
+* **API Reference:** Complete specifications for the `POST /predict/` endpoint, request schemas, and HTTP error states.
+* **Software Requirements Specification (SRS):** Detailed functional requirements, role permissions, latency targets, and compliance constraints.
+
+## License & Operational Scope
+
+Distributed under the MIT License.
+
+> **Notice:** InSight is architected as a Clinical Decision Support System (CDSS) for frontline triage. It is intended to assist healthcare providers and does not replace formal clinical diagnosis by a licensed ophthalmologist.
 
