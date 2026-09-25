@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="insight/">
+        <link rel="next" href="insight/insight/">
       
       
         
@@ -405,15 +405,118 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="insight/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
     InSight Medical Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InSight Medical Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="insight/insight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="insight/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="insight/developer-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer & API Guide
   
 
     
@@ -433,22 +536,70 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
     
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public API Documentation & Quickstart Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Public API Documentation & Quickstart Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="public-api-docs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    About
+    Stripe
   
 
     
@@ -457,6 +608,50 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting-runbooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -589,13 +784,14 @@
 
 <h1 id="faith-njuguna">Faith Njuguna</h1>
 <p>I am a Technical Writer and Documentation Engineer with a background in Computer Science. I focus on developer-facing documentation: REST API references, architecture guides, and docs-as-code workflows that help engineers build, integrate, and troubleshoot without friction.</p>
+<p><strong>Currently seeking:</strong> Technical Writer / Documentation Engineer roles, open to remote.</p>
 <p>This portfolio is built and version-controlled using <strong>MkDocs Material</strong>, <strong>Markdown</strong>, and <strong>Git</strong>, deployed via <strong>GitHub Pages</strong>.</p>
 <h2 id="featured-work">Featured Work</h2>
-<h3 id="insight-clinical-decision-support-docs"><a href="insight/">InSight Clinical Decision Support Docs</a></h3>
+<h3 id="insight-clinical-decision-support-docs"><a href="insight.md">InSight Clinical Decision Support Docs</a></h3>
 <p><em>Full-stack developer onboarding and API reference for an AI-driven cataract screening service.</em></p>
 <ul>
 <li><strong>The Problem:</strong> Clinical AI tools often operate as "black boxes" with isolated scripts, lacking reproducible local setups and clear interface contracts for integration engineers.</li>
-<li><strong>What I Built:</strong> <ul>
+<li><strong>What I Built:</strong><ul>
 <li>A 5-minute developer quickstart covering environment isolation and local service startup.</li>
 <li>An architecture pipeline explaining pre-validation gating and Grad-CAM visual heatmaps.</li>
 <li>Complete endpoint specifications for <code>POST /predict/</code> with real request payloads, binary image handling, and explicit HTTP error states (<code>400</code>, <code>422</code>).</li>
@@ -604,13 +800,13 @@
 <li><strong>My Process:</strong> Analyzed the underlying PyTorch inference engine and FastAPI backend, tested local request/response cycles using <code>curl</code> and Postman, and structured the user and developer paths separately so neither audience gets bogged down in irrelevant detail.</li>
 <li><strong>Skills Shown:</strong> API Reference Design, Technical Architecture Diagrams, Error State Documentation, Markdown.</li>
 </ul>
-<h3 id="public-api-documentation-quickstart-in-progress"><a href="about/">Public API Documentation &amp; Quickstart</a> <em>(In Progress)</em></h3>
+<h3 id="public-api-documentation-quickstart-in-progress"><a href="public-api-docs/">Public API Documentation &amp; Quickstart</a> <em>(In Progress)</em></h3>
 <p><em>A complete OpenAPI-based developer onboarding suite for a third-party REST service.</em></p>
 <ul>
 <li><strong>Target Scope:</strong> OpenAPI/Swagger spec parsing, authentication guides, code snippets in multiple languages, and common response workflows.</li>
 <li><strong>Process Highlight:</strong> Writing for the "zero to first successful call" developer journey, prioritizing copyable code samples and accurate parameter tables.</li>
 </ul>
-<h3 id="production-troubleshooting-runbooks-in-progress"><a href="about/">Production Troubleshooting &amp; Runbooks</a> <em>(In Progress)</em></h3>
+<h3 id="production-troubleshooting-runbooks-in-progress"><a href="troubleshooting-runbooks/">Production Troubleshooting &amp; Runbooks</a> <em>(In Progress)</em></h3>
 <p><em>A diagnostic runbook written to help engineers identify, isolate, and resolve service errors.</em></p>
 <ul>
 <li><strong>Target Scope:</strong> Root cause analysis templates, error code catalogs, and actionable remediation steps rather than vague descriptions.</li>
@@ -629,7 +825,7 @@
 <h2 id="connect">Connect</h2>
 <ul>
 <li><strong>GitHub:</strong> <a href="https://github.com/nyambura-pov">github.com/nyambura-pov</a></li>
-<li><strong>LinkedIn:</strong> <a href="www.linkedin.com/in/faith-njugunaaa">linkedin.com/in/faith-njugunaaa</a></li>
+<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/faith-njugunaaa">linkedin.com/in/faith-njugunaaa</a></li>
 <li><strong>Community:</strong> Active member in the <strong>Write the Docs</strong> Slack community.</li>
 </ul>
 

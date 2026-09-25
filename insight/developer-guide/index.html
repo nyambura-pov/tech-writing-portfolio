@@ -1,0 +1,1192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../user-guide/">
+      
+      
+        <link rel="next" href="../../public-api-docs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Developer & API Guide - Faith Njuguna | Technical Writer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#insight-developer-api-reference-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Faith Njuguna | Technical Writer" class="md-header__button md-logo" aria-label="Faith Njuguna | Technical Writer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Faith Njuguna | Technical Writer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developer & API Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Faith Njuguna | Technical Writer" class="md-nav__button md-logo" aria-label="Faith Njuguna | Technical Writer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Faith Njuguna | Technical Writer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InSight Medical Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InSight Medical Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer & API Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer & API Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-overview-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Overview &amp; Runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication &amp; Authorization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cataract-screening-intake-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cataract Screening &amp; Intake Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cataract Screening &amp; Intake Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-schemas-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Schemas &amp; Status Codes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Schemas &amp; Status Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok-inference-persistence-successful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        200 OK — Inference &amp; Persistence Successful
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-unprocessable-entity-missing-or-invalid-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        422 Unprocessable Entity — Missing or Invalid Payload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500-internal-server-error-pipeline-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        500 Internal Server Error — Pipeline Exception
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Side Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public API Documentation & Quickstart Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Public API Documentation & Quickstart Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../public-api-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting-runbooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-overview-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Overview &amp; Runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication &amp; Authorization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cataract-screening-intake-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cataract Screening &amp; Intake Pipeline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cataract Screening &amp; Intake Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-schemas-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Schemas &amp; Status Codes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Schemas &amp; Status Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok-inference-persistence-successful" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        200 OK — Inference &amp; Persistence Successful
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-unprocessable-entity-missing-or-invalid-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        422 Unprocessable Entity — Missing or Invalid Payload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500-internal-server-error-pipeline-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        500 Internal Server Error — Pipeline Exception
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Side Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="insight-developer-api-reference-guide">InSight Developer &amp; API Reference Guide</h1>
+<p>This guide provides technical specifications for integrating with and extending the InSight clinical decision-support microservice. It covers environment configuration, request contracts, database side effects, and response schemas for the FastAPI inference backend.</p>
+<h2 id="service-overview-runtime">Service Overview &amp; Runtime</h2>
+<ul>
+<li><strong>Framework:</strong> FastAPI (Python 3.9+)</li>
+<li><strong>ASGI Server:</strong> Uvicorn</li>
+<li><strong>Base URL:</strong> <code>http://127.0.0.1:8000</code></li>
+<li><strong>Interactive Documentation (Swagger UI):</strong> <code>http://127.0.0.1:8000/docs</code></li>
+<li><strong>Alternative Schema (ReDoc):</strong> <code>http://127.0.0.1:8000/redoc</code></li>
+</ul>
+<h2 id="authentication-authorization">Authentication &amp; Authorization</h2>
+<p>Clinical terminals and operators pass an authorized <code>user_id</code> (representing the authenticated doctor or nurse from Supabase Auth) in the multipart form payload:</p>
+<ul>
+<li><strong>Field:</strong> <code>user_id</code> (string / UUID)</li>
+<li><strong>Access Scopes:</strong> Validated against existing Supabase authentication users to associate patient intakes and prediction logs with specific clinical operators.</li>
+</ul>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="cataract-screening-intake-pipeline">Cataract Screening &amp; Intake Pipeline</h3>
+<p>Processes an ocular fundus scan through the ResNet-18 inference engine, generates a Grad-CAM saliency map, uploads assets to Supabase Storage, and commits audit records to PostgreSQL.</p>
+<ul>
+<li><strong>Path:</strong> <code>POST /predict/</code></li>
+<li><strong>Endpoint URL:</strong> <code>http://127.0.0.1:8000/predict/</code></li>
+<li><strong>Content-Type:</strong> <code>multipart/form-data</code></li>
+</ul>
+<h4 id="request-parameters">Request Parameters</h4>
+<p>All parameters are required form-data fields:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Encoding</th>
+<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>file</code></td>
+<td style="text-align: left;">Binary</td>
+<td style="text-align: left;">File (<code>UploadFile</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Retinal fundus image (<code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>patient_name</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Form (<code>str</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Full name or clinical pseudonym of the patient.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>age</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Form (<code>int</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Patient age in years.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gender</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Form (<code>str</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Biological sex or gender identifier (e.g., <code>Female</code>, <code>Male</code>, <code>Other</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>medical_history</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Form (<code>str</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Relevant pre-existing conditions (e.g., <code>Type 2 Diabetes</code>, <code>Hypertension</code>, <code>None</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>symptoms</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Form (<code>str</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Self-reported visual disturbances (e.g., <code>Cloudy vision</code>, <code>Haloes around lights</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>user_id</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Form (<code>str</code>)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">UUID or account identifier of the screening clinician.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-examples">Request Examples</h4>
+<p>=== "cURL"</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8000/predict/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;file=@scans/patient_scan_01.png&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;patient_name=PAT-2026-0841&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;age=64&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;gender=Female&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;medical_history=Type 2 Diabetes&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;symptoms=Blurry vision in left eye&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>-F<span class="w"> </span><span class="s2">&quot;user_id=usr_9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d&quot;</span>
+</code></pre></div>
+<p>=== "Python (Requests)"</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+    <span class="n">api_url</span> <span class="o">=</span> <span class="s2">&quot;http://127.0.0.1:8000/predict/&quot;</span>
+
+    <span class="c1"># Prepare multipart payload</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;patient_name&quot;</span><span class="p">:</span> <span class="s2">&quot;PAT-2026-0841&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+        <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Female&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;medical_history&quot;</span><span class="p">:</span> <span class="s2">&quot;Type 2 Diabetes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;symptoms&quot;</span><span class="p">:</span> <span class="s2">&quot;Blurry vision in left eye&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;usr_9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;scans/patient_scan_01.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">image_file</span><span class="p">:</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;patient_scan_01.png&quot;</span><span class="p">,</span> <span class="n">image_file</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">)}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<h2 id="response-schemas-status-codes">Response Schemas &amp; Status Codes</h2>
+<h3 id="200-ok-inference-persistence-successful"><code>200 OK</code> — Inference &amp; Persistence Successful</h3>
+<p>Returned when the scan is classified, Grad-CAM is generated, and patient/prediction records are persisted to Supabase.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cataract&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9854</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;all_probabilities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;No Cataract&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0146</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Cataract&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9854</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;patient_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;841b8a53-487e-4009-8ff4-938814529db7&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;image_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://your-project.supabase.co/storage/v1/object/public/scans/patient_scan_01.png&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;gradcam_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://your-project.supabase.co/storage/v1/object/public/scans/gradcam_4f09d82e-68be-4091-8d26-a07727e4eef6.png&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Response Field Reference</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>class</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Final categorical classification: <code>"Cataract"</code> or <code>"No Cataract"</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confidence</code></td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">Softmax probability assigned to the predicted class (0.0 to 1.0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>all_probabilities</code></td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">Complete probability distribution across both diagnostic classes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>patient_id</code></td>
+<td style="text-align: left;">string / int</td>
+<td style="text-align: left;">Generated primary key record ID from the <code>patients</code> table in Supabase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>image_url</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Public or pre-signed URL of the raw uploaded fundus photograph in cloud storage.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gradcam_url</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Public or pre-signed URL of the generated Grad-CAM saliency visualization in cloud storage.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="422-unprocessable-entity-missing-or-invalid-payload"><code>422 Unprocessable Entity</code> — Missing or Invalid Payload</h3>
+<p>Returned automatically by FastAPI if required form fields are missing or if field data types are mismatched (e.g., passing a string for <code>age</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;loc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;age&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value is not a valid integer&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;type_error.integer&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="500-internal-server-error-pipeline-exception"><code>500 Internal Server Error</code> — Pipeline Exception</h3>
+<p>Returned if an unhandled exception occurs during tensor transformation, model forward pass, or Supabase storage upload.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Failed to upload image to Supabase: Bucket not found or connection timed out.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Retry Guidance</p>
+<p>A <code>500</code> response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request will not succeed if the underlying issue (e.g., storage bucket misconfiguration) persists. Escalate to IT support if repeated <code>500</code> responses occur.</p>
+</div>
+<h2 id="database-side-effects">Database Side Effects</h2>
+<p>Every successful call to <code>POST /predict/</code> performs two database transactions:</p>
+<ol>
+<li><strong><code>patients</code> table insert:</strong> Records patient demographics, history, symptoms, raw image URL, and <code>created_by</code> clinician ID.</li>
+<li><strong><code>predictions</code> table insert:</strong> Links the newly created <code>patient_id</code> to the classification result, confidence score, Grad-CAM asset URL, and clinician audit trail.</li>
+</ol>
+<h2 id="related-resources">Related Resources</h2>
+<ul>
+<li><a href="../user-guide/">Clinical Operator Guide</a> — screening workflow for nurses and clinical staff.</li>
+<li><a href="../insight/">InSight Overview</a> — architecture, model benchmarks, and clinical context.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
