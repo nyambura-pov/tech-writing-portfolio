@@ -21,7 +21,7 @@ InSight separates heavy machine learning inference from the clinical presentatio
 * **Application Layer:** Asynchronous FastAPI backend managing the MobileNetV2 gatekeeper, PyTorch ResNet-18 model, and Grad-CAM computation.
 * **Data & Authentication Layer:** Supabase-managed PostgreSQL storage with Role-Based Access Control (RBAC) separating nurse and physician roles.
 
-![InSight Architecture Pipeline](assets/insight-architecture.png)
+![InSight Architecture Pipeline](../assets/insight-architecture.png)
 
 ## Quickstart & Local Setup
 
@@ -32,45 +32,49 @@ Follow these steps to run the inference backend and clinical interface locally.
 * Python 3.9+
 * Git
 
-### 1. Clone the Code Repository
+### Clone the Code Repository
 
+```bash
 git clone https://github.com/nyambura-pov/InSight_Cataract_Detection.git
 cd InSight_Cataract_Detection
+```
 
-### 2. Environment Setup & Dependencies
+### Environment Setup & Dependencies
 
 ```bash
 # Create and activate virtual environment
 python -m venv .venv
-source .venv/bin/activate # On Windows: .venv\Scripts\Activate.ps1
+source .venv/bin/activate  # On Windows: .venv\Scripts\Activate.ps1
 
 # Install requirements
 pip install -r requirements.txt
 ```
 
-### 3. Configure Service Secrets
+### Configure Service Secrets
 
-Create a .streamlit/secrets.toml file in the project root:
+Create a `.streamlit/secrets.toml` file in the project root:
 
 ```toml
 [supabase]
-url = "[https://your-project-id.supabase.co](https://your-project-id.supabase.co)"
+url = "https://your-project-id.supabase.co"
 key = "your-supabase-anon-key"
 ```
 
-### 4. Launch Services
+### Launch Services
 
 Start the FastAPI inference engine:
+
 ```bash
 uvicorn backend_app:app --reload --port 8000
 ```
 
 In a second terminal window, launch the clinician dashboard:
+
 ```bash
 streamlit run app.py
 ```
 
-Access the interface locally at http://localhost:8501
+Access the interface locally at `http://localhost:8501`.
 
 ## Model Performance Benchmarks
 
@@ -84,15 +88,15 @@ The core ResNet-18 model was trained on the ODIR-5K dataset using Focal Loss (γ
 | **F1-Score** | **0.992** | Robust balance between precision and recall across skewed data distributions. |
 | **AUC-ROC** | **0.998** | High diagnostic discrimination between diseased and healthy ocular states. |
 
-
 ## Documentation Modules
 
-* **API Reference:** Complete specifications for the `POST /predict/` endpoint, request schemas, and HTTP error states.
+* **[Clinical Operator Guide](user-guide.md):** Step-by-step screening workflow for nurses and clinical staff.
+* **[API Reference](developer-guide.md):** Complete specifications for the `POST /predict/` endpoint, request schemas, and HTTP error states.
 * **Software Requirements Specification (SRS):** Detailed functional requirements, role permissions, latency targets, and compliance constraints.
 
 ## License & Operational Scope
 
 Distributed under the MIT License.
 
-> **Notice:** InSight is architected as a Clinical Decision Support System (CDSS) for frontline triage. It is intended to assist healthcare providers and does not replace formal clinical diagnosis by a licensed ophthalmologist.
-
+!!! note "Operational Scope"
+    InSight is architected as a Clinical Decision Support System (CDSS) for frontline triage. It is intended to assist healthcare providers and does not replace formal clinical diagnosis by a licensed ophthalmologist.

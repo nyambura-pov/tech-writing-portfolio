@@ -1,3 +1,8 @@
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  
 site_name: Faith Njuguna | Technical Writer
 theme:
   name: material
@@ -8,5 +13,11 @@ theme:
 nav:
   - Home: index.md
   - Projects:
-      - InSight Medical Docs: insight.md
-  - About: about.md
+      - InSight Medical Docs:
+          - Overview: insight/insight.md
+          - User Guide: insight/user-guide.md
+          - Developer & API Guide: insight/developer-guide.md
+      - Public API Documentation & Quickstart Docs:
+          - Stripe: public-api-docs.md
+          - Production Troubleshooting: troubleshooting-runbooks.md
+  
