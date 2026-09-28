@@ -1,48 +1,56 @@
 # Faith Njuguna
 
-I am a Technical Writer and Documentation Engineer with a background in Computer Science. I focus on developer-facing documentation: REST API references, architecture guides, and docs-as-code workflows that help engineers build, integrate, and troubleshoot without friction.
+I'm a technical writer and documentation engineer with a background in computer science. I specialize in developer-facing documentation: REST API references, architecture guides, and docs-as-code workflows that help engineers build, integrate, and troubleshoot systems.
 
-**Currently seeking:** Technical Writer / Documentation Engineer roles, open to remote.
+**Currently seeking:** technical writer and documentation engineer roles. Open to remote work.
 
-This portfolio is built and version-controlled using **MkDocs Material**, **Markdown**, and **Git**, deployed via **GitHub Pages**.
+I built this portfolio with MkDocs Material and Markdown. I manage it in Git and deploy it with GitHub Pages.
 
-## Featured Work
+## Featured work
 
-### [InSight Clinical Decision Support Docs](insight.md)
-*Full-stack developer onboarding and API reference for an AI-driven cataract screening service.*
+### [InSight clinical decision support documentation](insight/insight.md)
 
-* **The Problem:** Clinical AI tools often operate as "black boxes" with isolated scripts, lacking reproducible local setups and clear interface contracts for integration engineers.
-* **What I Built:**
-    * A 5-minute developer quickstart covering environment isolation and local service startup.
-    * An architecture pipeline explaining pre-validation gating and Grad-CAM visual heatmaps.
-    * Complete endpoint specifications for `POST /predict/` with real request payloads, binary image handling, and explicit HTTP error states (`400`, `422`).
-* **My Process:** Analyzed the underlying PyTorch inference engine and FastAPI backend, tested local request/response cycles using `curl` and Postman, and structured the user and developer paths separately so neither audience gets bogged down in irrelevant detail.
-* **Skills Shown:** API Reference Design, Technical Architecture Diagrams, Error State Documentation, Markdown.
+Developer onboarding, a clinical operator guide, and an API reference for an AI-driven cataract screening service.
 
-### [Public API Documentation & Quickstart](public-api-docs.md) *(In Progress)*
-*A complete OpenAPI-based developer onboarding suite for a third-party REST service.*
+* **The problem:** Clinical AI tools often run as opaque systems with isolated scripts. They lack reproducible local setups and clear interface contracts for integration engineers.
+* **What I built:**
+    * A developer quickstart that covers environment isolation and local service startup.
+    * An architecture overview that explains the pre-validation gate and Grad-CAM heatmaps.
+    * An endpoint reference for `POST /predict/` with multipart request examples in cURL and Python, binary image handling, and documented `422` and `500` error responses.
+    * A clinical operator guide that walks nurses through screening, Grad-CAM interpretation, and referral report export.
+* **My process:** I analyzed the PyTorch inference engine and the FastAPI backend. I verified request and response cycles with cURL and Postman. I wrote separate paths for clinical and engineering audiences.
+* **Skills shown:** API reference design, architecture documentation, error state documentation, and Markdown.
 
-* **Target Scope:** OpenAPI/Swagger spec parsing, authentication guides, code snippets in multiple languages, and common response workflows.
-* **Process Highlight:** Writing for the "zero to first successful call" developer journey, prioritizing copyable code samples and accurate parameter tables.
+### [Public API documentation and quickstart](public-api-docs.md)
 
-### [Production Troubleshooting & Runbooks](troubleshooting-runbooks.md) *(In Progress)*
-*A diagnostic runbook written to help engineers identify, isolate, and resolve service errors.*
+Status: in progress.
 
-* **Target Scope:** Root cause analysis templates, error code catalogs, and actionable remediation steps rather than vague descriptions.
+A developer onboarding suite for a third-party REST service, based on its OpenAPI specification.
 
-## How I Approach Documentation
+* **Target scope:** OpenAPI specification parsing, authentication guides, multi-language code samples, and common response workflows.
+* **Focus:** The "zero to first successful call" journey, with copyable code samples and complete parameter tables.
 
-* **Engineering Empathy:** Documentation should answer practical developer questions quickly: *What is this? How do I authenticate? What does a valid payload look like? Why did it fail?*
-* **Docs-as-Code:** I believe documentation belongs close to the code; managed in Git, written in Markdown, verified through pull requests, and automated through continuous deployment.
-* **Cross-Functional Verification:** Good documentation isn't written in isolation. I interview Subject Matter Experts (SMEs), cross-reference requirements with QA test cases, and personally run the commands before publishing.
+### [Production troubleshooting and runbooks](troubleshooting-runbooks.md)
 
-## Core Tooling
+Status: in progress.
 
-* **Documentation & Markup:** Markdown, OpenAPI (Swagger), MkDocs Material, Git/GitHub, Docs-as-Code.
-* **Technical Foundation:** REST APIs, Postman, Python (FastAPI, PyTorch basics), HTTP Status & Error Handling, Terminal fundamentals.
+A diagnostic runbook that helps engineers identify, isolate, and resolve production errors.
+
+* **Target scope:** Root cause analysis templates, an error code catalog, and remediation steps.
+
+## How I approach documentation
+
+* **Engineering empathy:** Documentation should answer practical questions quickly. What is this service? How do I authenticate? What does a valid request look like? Why did my request fail?
+* **Docs-as-code:** I keep documentation close to the source code. I author it in Markdown, manage it in Git, review it with peers, and publish it through continuous integration.
+* **Cross-functional verification:** I interview subject matter experts (SMEs), compare requirements against QA test cases, and run commands locally to verify behavior before publishing.
+
+## Core tooling
+
+* **Documentation and markup:** Markdown, OpenAPI (Swagger), MkDocs Material, Git, GitHub, docs-as-code.
+* **Technical foundation:** REST APIs, Postman, Python (FastAPI, PyTorch), HTTP status codes, Linux command line.
 
 ## Connect
 
 * **GitHub:** [github.com/nyambura-pov](https://github.com/nyambura-pov)
 * **LinkedIn:** [linkedin.com/in/faith-njugunaaa](https://www.linkedin.com/in/faith-njugunaaa)
-* **Community:** Active member in the **Write the Docs** Slack community.
+* **Community:** Member of the Write the Docs community.

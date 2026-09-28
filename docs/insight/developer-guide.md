@@ -1,33 +1,33 @@
-# InSight Developer & API Reference Guide
+# InSight developer and API reference guide
 
-This guide provides technical specifications for integrating with and extending the InSight clinical decision-support microservice. It covers environment configuration, request contracts, database side effects, and response schemas for the FastAPI inference backend.
+This guide provides technical specifications for integrating with and extending the InSight clinical decision support microservice. It covers environment configuration, request contracts, database side effects, and response schemas for the FastAPI inference backend.
 
-## Service Overview & Runtime
+## Service overview and runtime
 
-* **Framework:** FastAPI (Python 3.9+)
-* **ASGI Server:** Uvicorn
+* **Framework:** FastAPI (Python 3.9 or later)
+* **ASGI server:** Uvicorn
 * **Base URL:** `http://127.0.0.1:8000`
-* **Interactive Documentation (Swagger UI):** `http://127.0.0.1:8000/docs`
-* **Alternative Schema (ReDoc):** `http://127.0.0.1:8000/redoc`
+* **Interactive documentation (Swagger UI):** `http://127.0.0.1:8000/docs`
+* **Alternative schema (ReDoc):** `http://127.0.0.1:8000/redoc`
 
-## Authentication & Authorization
+## Authentication and authorization
 
-Clinical terminals and operators pass an authorized `user_id` (representing the authenticated doctor or nurse from Supabase Auth) in the multipart form payload:
+Clinical terminals and operators pass an authorized `user_id`, a universally unique identifier (UUID) that represents the authenticated doctor or nurse from Supabase Auth, in the multipart form payload:
 
 * **Field:** `user_id` (string / UUID)
-* **Access Scopes:** Validated against existing Supabase authentication users to associate patient intakes and prediction logs with specific clinical operators.
+* **Access scopes:** Validated against existing Supabase authentication users, to associate patient intakes and prediction logs with specific clinical operators.
 
 ## Endpoints
 
-### Cataract Screening & Intake Pipeline
+### Cataract screening and intake pipeline
 
-Processes an ocular fundus scan through the ResNet-18 inference engine, generates a Grad-CAM saliency map, uploads assets to Supabase Storage, and commits audit records to PostgreSQL.
+This endpoint processes an ocular fundus scan through the ResNet-18 inference engine, generates a Grad-CAM saliency map, uploads assets to Supabase Storage, and commits audit records to PostgreSQL.
 
 * **Path:** `POST /predict/`
 * **Endpoint URL:** `http://127.0.0.1:8000/predict/`
 * **Content-Type:** `multipart/form-data`
 
-#### Request Parameters
+#### Request parameters
 
 All parameters are required form-data fields:
 
@@ -35,13 +35,13 @@ All parameters are required form-data fields:
 | :--- | :--- | :--- | :--- | :--- |
 | `file` | Binary | File (`UploadFile`) | Yes | Retinal fundus image (`.jpg`, `.jpeg`, `.png`). |
 | `patient_name` | string | Form (`str`) | Yes | Full name or clinical pseudonym of the patient. |
-| `age` | integer | Form (`int`) | Yes | Patient age in years. |
-| `gender` | string | Form (`str`) | Yes | Biological sex or gender identifier (e.g., `Female`, `Male`, `Other`). |
-| `medical_history` | string | Form (`str`) | Yes | Relevant pre-existing conditions (e.g., `Type 2 Diabetes`, `Hypertension`, `None`). |
-| `symptoms` | string | Form (`str`) | Yes | Self-reported visual disturbances (e.g., `Cloudy vision`, `Haloes around lights`). |
+| `age` | integer | Form (`int`) | Yes | Patient age, in years. |
+| `gender` | string | Form (`str`) | Yes | Biological sex or gender identifier, for example, `Female`, `Male`, or `Other`. |
+| `medical_history` | string | Form (`str`) | Yes | Relevant pre-existing conditions, for example, `Type 2 Diabetes`, `Hypertension`, or `None`. |
+| `symptoms` | string | Form (`str`) | Yes | Self-reported visual disturbances, for example, `Cloudy vision` or `Haloes around lights`. |
 | `user_id` | string | Form (`str`) | Yes | UUID or account identifier of the screening clinician. |
 
-#### Request Examples
+#### Request examples
 
 === "cURL"
 
@@ -63,7 +63,7 @@ All parameters are required form-data fields:
 
     api_url = "http://127.0.0.1:8000/predict/"
 
-    # Prepare multipart payload
+    # Prepare the multipart payload.
     payload = {
         "patient_name": "PAT-2026-0841",
         "age": 64,
@@ -81,11 +81,11 @@ All parameters are required form-data fields:
     print(response.json())
 ```
 
-## Response Schemas & Status Codes
+## Response schemas and status codes
 
-### `200 OK` — Inference & Persistence Successful
+### `200 OK`: inference and persistence successful
 
-Returned when the scan is classified, Grad-CAM is generated, and patient/prediction records are persisted to Supabase.
+Returned when the scan is classified, the Grad-CAM map is generated, and the patient and prediction records are persisted to Supabase.
 
 ```json
 {
@@ -101,7 +101,7 @@ Returned when the scan is classified, Grad-CAM is generated, and patient/predict
 }
 ```
 
-**Response Field Reference**
+#### Response field reference
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
@@ -112,9 +112,9 @@ Returned when the scan is classified, Grad-CAM is generated, and patient/predict
 | `image_url` | string | Public or pre-signed URL of the raw uploaded fundus photograph in cloud storage. |
 | `gradcam_url` | string | Public or pre-signed URL of the generated Grad-CAM saliency visualization in cloud storage. |
 
-### `422 Unprocessable Entity` — Missing or Invalid Payload
+### `422 Unprocessable Entity`: missing or invalid payload
 
-Returned automatically by FastAPI if required form fields are missing or if field data types are mismatched (e.g., passing a string for `age`).
+FastAPI returns this automatically if required form fields are missing, or if field data types don't match, for example, if you pass a string for `age`.
 
 ```json
 {
@@ -128,9 +128,9 @@ Returned automatically by FastAPI if required form fields are missing or if fiel
 }
 ```
 
-### `500 Internal Server Error` — Pipeline Exception
+### `500 Internal Server Error`: pipeline exception
 
-Returned if an unhandled exception occurs during tensor transformation, model forward pass, or Supabase storage upload.
+Returned if an unhandled exception occurs during tensor transformation, the model forward pass, or the Supabase storage upload.
 
 ```json
 {
@@ -138,17 +138,17 @@ Returned if an unhandled exception occurs during tensor transformation, model fo
 }
 ```
 
-!!! warning "Retry Guidance"
-    A `500` response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request will not succeed if the underlying issue (e.g., storage bucket misconfiguration) persists. Escalate to IT support if repeated `500` responses occur.
+!!! warning "Retry guidance"
+    A `500` response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request doesn't succeed if the underlying issue, such as a storage bucket misconfiguration, persists. Escalate to IT support if repeated `500` responses occur.
 
-## Database Side Effects
+## Database side effects
 
 Every successful call to `POST /predict/` performs two database transactions:
 
-1. **`patients` table insert:** Records patient demographics, history, symptoms, raw image URL, and `created_by` clinician ID.
-2. **`predictions` table insert:** Links the newly created `patient_id` to the classification result, confidence score, Grad-CAM asset URL, and clinician audit trail.
+1. **`patients` table insert:** Records patient demographics, history, symptoms, the raw image URL, and the `created_by` clinician ID.
+2. **`predictions` table insert:** Links the new `patient_id` to the classification result, the confidence score, the Grad-CAM asset URL, and the clinician audit trail.
 
-## Related Resources
+## Related resources
 
-* [Clinical Operator Guide](user-guide.md) — screening workflow for nurses and clinical staff.
-* [InSight Overview](insight.md) — architecture, model benchmarks, and clinical context.
+* [Clinical operator guide](user-guide.md): The screening workflow for nurses and clinical staff.
+* [InSight overview](insight.md): Architecture, model benchmarks, and clinical context. 
