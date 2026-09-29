@@ -31,6 +31,10 @@ After a scan meets the intake standards, screen it using the following workflow.
 1. In the left sidebar, go to **Patient Screening** > **Single Scan**.
 2. In the **Patient Identifier** field, enter the assigned patient ID (for example, `PAT-2026-0841`). Don't enter personal details such as names or national identity numbers.
 3. Select **Browse Files**, or drag and drop the file, to upload the retinal fundus image.
+
+![InSight Scan Acquisition Interface](../assets/insight-intake-screen.png)
+*Figure 1: The InSight diagnostic interface ready for single or batch fundus image acquisition.*
+
 4. Select **Run Screening Analysis**.
 5. After processing completes (typically 3–5 seconds), review the screening card:
     * **Classification:** Shows either **Normal** (no significant cataract indications) or **Cataract Detected**.
@@ -39,6 +43,9 @@ After a scan meets the intake standards, screen it using the following workflow.
 ## Read the Grad-CAM heatmap
 
 When InSight classifies an image, it provides an explainable visual overlay called a Grad-CAM saliency map. This map helps you verify why the model flagged a scan.
+
+![InSight Cataract Detection and Grad-CAM Output](../assets/insight-gradcam-cataract.png)
+*Figure 2: Screening result displaying positive cataract detection (92.5% confidence) alongside the Grad-CAM saliency overlay and urgent referral notice.*
 
 | Heatmap color | Clinical meaning | Recommended action |
 | :--- | :--- | :--- |
@@ -51,14 +58,29 @@ When InSight classifies an image, it provides an explainable visual overlay call
 
 ## Export a referral report as PDF
 
-If a patient needs follow-up care with an ophthalmology specialist, export a referral report:
+If a patient requires referral or physical documentation, operators can generate and download audit records directly from the results view:
 
-1. On the completed screening result screen, click **Generate Referral Report (PDF)**.
-2. The system compiles a one-page PDF that contains the following:
-    * The patient identifier and screening timestamp.
-    * A side-by-side display of the original fundus scan and the Grad-CAM heatmap.
-    * The model's classification score and the standard clinical disclaimer.
-3. Select **Download PDF** to save the document to your local clinic records, or attach it to the patient's electronic referral file.
+1. Review the generated Grad-CAM overlay and confirmation prompts.
+2. Select **Export PDF Report** to compile the clinical summary, or select **Export Grad-CAM** to download the standalone visual asset.
+
+![InSight Report and Asset Export Controls](../assets/insight-export-actions.png)
+*Figure 3: Action controls for saving results, exporting the referral PDF, and extracting Grad-CAM visual assets.*
+
+The generated single-page PDF report formats patient metadata, quantitative confidence scores, diagnostic recommendations, and side-by-side retinal visualizations for specialist review.
+
+![InSight Ocular Screening Report Sample](../assets/insight-referral-report-pdf.png)
+*Figure 4: Sample InSight clinical referral document generated for specialist handoff.*
+
+## Reviewing patient screening history
+
+Operators can retrieve prior screening records and historical reports using the patient tracking module:
+
+1. In the left navigation menu, select **Patient History**.
+2. Enter the assigned **Patient Identifier** (for example, `PATIENT-024`) and select **Search History**.
+3. Review the historical record table for previous screening timestamps, classification outcomes, confidence scores, and operator IDs.
+
+![InSight Patient History Lookup View](../assets/insight-patient-history.png)
+*Figure 5: Historical screening log displaying prior intake records and diagnostic results.*
 
 ## Troubleshoot common intake issues
 
