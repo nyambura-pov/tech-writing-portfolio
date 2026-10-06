@@ -18,7 +18,7 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.tabbed:
-      alternate_style: true
+      alternate_style: true       
 
 nav:
   - Home: index.md
@@ -31,3 +31,4 @@ nav:
            - Stripe API quickstart: public-api-docs.md
        - Production troubleshooting:
            - Troubleshooting runbooks: troubleshooting-runbooks.md
+       - Contact & Resume: contact.md    

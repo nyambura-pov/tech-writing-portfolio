@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: InSight Screening Service API
+  description: Automated cataract triage and clinical decision-support microservice.
+  version: 1.0.0
+
+servers:
+  - url: http://127.0.0.1:8000
+    description: Local development server
+
+paths:
+  /predict/:
+    post:
+      summary: Submit fundus scan for screening
+      description: Runs MobileNetV2 gatekeeper validation and ResNet-18 classification.
+      responses:
+        '200':
+          description: Screening analysis completed successfully.
