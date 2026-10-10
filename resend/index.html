@@ -23,7 +23,7 @@
     
     
       
-        <title>Stripe API quickstart - Faith Njuguna | Technical Writer</title>
+        <title>Resend Email API - Faith Njuguna | Technical Writer</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coming-soon" class="md-skip">
+        <a href="#resend-email-api-developer-onboarding-reference-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stripe API quickstart
+              Resend Email API
             
           </span>
         </div>
@@ -483,6 +483,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -491,7 +493,7 @@
   <span class="md-ellipsis">
     
   
-    Stripe API quickstart
+    Resend Email API
   
 
     
@@ -509,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    Stripe API quickstart
+    Resend Email API
   
 
     
@@ -525,6 +527,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -533,10 +537,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#coming-soon" class="md-nav__link">
+  <a href="#1-overview-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Coming soon
+        1. Overview &amp; architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-authentication-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Authentication &amp; prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-5-minute-quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 5-minute quickstart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-endpoints-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Endpoints reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Endpoints reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-send-a-single-email-post-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Send a single email (POST /emails)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-retrieve-email-delivery-status-get-emailsid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Retrieve email delivery status (GET /emails/{id})
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-send-batch-emails-post-emailsbatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Send batch emails (POST /emails/batch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-status-codes-error-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Status codes &amp; error catalog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rate-limits-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Rate limits &amp; best practices
       
     </span>
   </a>
@@ -697,6 +795,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -705,10 +805,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#coming-soon" class="md-nav__link">
+  <a href="#1-overview-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Coming soon
+        1. Overview &amp; architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-authentication-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Authentication &amp; prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-5-minute-quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 5-minute quickstart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-endpoints-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Endpoints reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Endpoints reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-send-a-single-email-post-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Send a single email (POST /emails)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-retrieve-email-delivery-status-get-emailsid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Retrieve email delivery status (GET /emails/{id})
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-send-batch-emails-post-emailsbatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Send batch emails (POST /emails/batch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-status-codes-error-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Status codes &amp; error catalog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rate-limits-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Rate limits &amp; best practices
       
     </span>
   </a>
@@ -732,10 +926,32 @@
 
 
 
-  <h1>Stripe API quickstart</h1>
+<h1 id="resend-email-api-developer-onboarding-reference-guide">Resend Email API: Developer Onboarding &amp; Reference Guide</h1>
+<p>A complete developer integration guide and OpenAPI-aligned reference for the Resend transactional email platform.</p>
+<h2 id="1-overview-architecture">1. Overview &amp; architecture</h2>
+<!-- Brief explanation of Resend, transactional messaging, and the REST architecture -->
 
-<h2 id="coming-soon">Coming soon</h2>
-<p><em>Case study in progress.</em></p>
+<h2 id="2-authentication-prerequisites">2. Authentication &amp; prerequisites</h2>
+<!-- How to get an API key, header formatting (Bearer token), and security practices -->
+
+<h2 id="3-5-minute-quickstart">3. 5-minute quickstart</h2>
+<!-- Copyable cURL and Python snippets for zero-to-first-successful-email -->
+
+<h2 id="4-endpoints-reference">4. Endpoints reference</h2>
+<h3 id="41-send-a-single-email-post-emails">4.1 Send a single email (<code>POST /emails</code>)</h3>
+<!-- Parameter table, payload requirements, and example request/response -->
+
+<h3 id="42-retrieve-email-delivery-status-get-emailsid">4.2 Retrieve email delivery status (<code>GET /emails/{id}</code>)</h3>
+<!-- Path parameters, response fields, and status state machine -->
+
+<h3 id="43-send-batch-emails-post-emailsbatch">4.3 Send batch emails (<code>POST /emails/batch</code>)</h3>
+<!-- Array payload structure, batch limits, and bulk response arrays -->
+
+<h2 id="5-status-codes-error-catalog">5. Status codes &amp; error catalog</h2>
+<!-- 200, 401, 422, 429 explanation and structured error schemas -->
+
+<h2 id="6-rate-limits-best-practices">6. Rate limits &amp; best practices</h2>
+<!-- Header inspection, exponential backoff, and production recommendations -->
 
 
 
