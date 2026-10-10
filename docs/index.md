@@ -21,14 +21,15 @@ Developer onboarding, a clinical operator guide, and an API reference for an AI-
 * **My process:** I analyzed the PyTorch inference engine and the FastAPI backend. I verified request and response cycles with cURL and Postman. I wrote separate paths for clinical and engineering audiences.
 * **Skills shown:** API reference design, architecture documentation, error state documentation, and Markdown.
 
-### [Public API documentation and quickstart](public-api-docs.md)
+### [Public API documentation: Resend Email API](resend/index.md)
 
 Status: in progress.
 
-A developer onboarding suite for a third-party REST service, based on its OpenAPI specification.
+A developer onboarding suite and OpenAPI-aligned reference for the Resend transactional email platform.
 
-* **Target scope:** OpenAPI specification parsing, authentication guides, multi-language code samples, and common response workflows.
-* **Focus:** The "zero to first successful call" journey, with copyable code samples and complete parameter tables.
+* **Target scope:** OpenAPI 3.0 specification authoring, Bearer token authentication, multi-language code samples (cURL and Python), and structured error schemas.
+* **Focus:** The "zero to first successful call" journey, complete parameter definitions, and transactional email status lifecycle.
+* **Skills shown:** REST API documentation, OpenAPI (OAS 3.0), Swagger tooling, developer quickstarts, and schema definition.
 
 ### [Production troubleshooting and runbooks](troubleshooting-runbooks.md)
 

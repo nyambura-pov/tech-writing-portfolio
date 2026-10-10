@@ -28,7 +28,7 @@ nav:
            - Clinical operator guide: insight/user-guide.md
            - Developer and API guide: insight/developer-guide.md
        - Public API documentation:
-           - Stripe API quickstart: public-api-docs.md
+           - Resend Email API: resend/index.md
        - Production troubleshooting:
            - Troubleshooting runbooks: troubleshooting-runbooks.md
        - Contact & Resume: contact.md    
