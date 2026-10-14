@@ -1,0 +1,308 @@
+openapi: 3.1.0
+info:
+  title: Resend Email API (portfolio sample)
+  version: 1.0.0
+  description: |
+    Independent documentation sample covering a subset of the Resend API:
+    sending an email, sending a batch, and retrieving an email.
+    Not official Resend documentation.
+servers:
+  - url: https://api.resend.com
+    description: Production
+security:
+  - bearerAuth: []
+tags:
+  - name: Emails
+    description: Send and retrieve transactional email.
+paths:
+  /emails:
+    post:
+      tags: [Emails]
+      operationId: sendEmail
+      summary: Send an email
+      description: Queues a single email for delivery.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SendEmailRequest"
+            example:
+              from: "Acme <onboarding@resend.dev>"
+              to: ["delivered@resend.dev"]
+              subject: "Hello from the Resend API"
+              html: "<p>Congrats on sending your first email with <strong>Resend</strong>!</p>"
+      responses:
+        "200":
+          description: Email accepted for delivery.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SendEmailResponse"
+              example:
+                id: 01a13c69-fa51-7d25-9158-ef0e1ac508a7
+        "401":
+          $ref: "#/components/responses/InvalidApiKey"
+        "403":
+          $ref: "#/components/responses/DomainNotVerified"
+        "422":
+          $ref: "#/components/responses/MissingField"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+  /emails/batch:
+    post:
+      tags: [Emails]
+      operationId: sendBatchEmails
+      summary: Send batch emails
+      description: |
+        Queues up to 100 emails in a single request. Attachments and
+        scheduled sending are not supported in batch requests.
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              minItems: 1
+              maxItems: 100
+              items:
+                $ref: "#/components/schemas/SendEmailRequest"
+      responses:
+        "200":
+          description: All emails accepted for delivery.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SendBatchResponse"
+              example:
+                data:
+                  - id: 01a13c71-c142-788f-ab5c-011036e2c098
+                  - id: 01a13c71-c142-7775-a562-3f5143e032db
+        "401":
+          $ref: "#/components/responses/InvalidApiKey"
+        "403":
+          $ref: "#/components/responses/DomainNotVerified"
+        "422":
+          $ref: "#/components/responses/MissingField"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+  /emails/{email_id}:
+    get:
+      tags: [Emails]
+      operationId: getEmail
+      summary: Retrieve an email
+      description: Returns the details and latest delivery event of a sent email.
+      parameters:
+        - name: email_id
+          in: path
+          required: true
+          description: The `id` returned when the email was sent.
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Email details.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Email"
+              example:
+                object: email
+                id: 01a13c69-fa51-7d25-9158-ef0e1ac508a7
+                to: ["delivered@resend.dev"]
+                from: "Acme <onboarding@resend.dev>"
+                created_at: "2026-10-14 21:55:40.924000+00"
+                subject: "Hello from the Resend API"
+                bcc: null
+                cc: null
+                reply_to: null
+                last_event: delivered
+                scheduled_at: null
+                message_id: "<010001a13c69fbd4-f6c90015-97e9-4569-93cf-c5b787ae658f-000000@email.amazonses.com>"
+                html: "<p>Congrats on sending your first email with <strong>Resend</strong>!</p>"
+                text: "Congrats on sending your first email with Resend!"
+        "401":
+          $ref: "#/components/responses/InvalidApiKey"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: API key from the Resend dashboard. Keys start with `re_`.
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: false
+      description: Unique key that prevents duplicate sends when a request is retried.
+      schema:
+        type: string
+        maxLength: 256
+  schemas:
+    SendEmailRequest:
+      type: object
+      required: [from, to, subject]
+      properties:
+        from:
+          type: string
+          description: Sender address. The format `Name <address@domain>` is supported.
+          examples: ["Acme <onboarding@resend.dev>"]
+        to:
+          description: One recipient address, or an array of addresses.
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+        subject:
+          type: string
+        html:
+          type: string
+          description: HTML body. Provide `html`, `text`, or both.
+        text:
+          type: string
+          description: Plain-text body. Generated from `html` if omitted.
+        cc:
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+        bcc:
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+        reply_to:
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+        headers:
+          type: object
+          additionalProperties:
+            type: string
+    SendEmailResponse:
+      type: object
+      required: [id]
+      properties:
+        id:
+          type: string
+    SendBatchResponse:
+      type: object
+      required: [data]
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/SendEmailResponse"
+    Email:
+      type: object
+      properties:
+        object:
+          type: string
+          examples: [email]
+        id:
+          type: string
+        from:
+          type: string
+        to:
+          type: array
+          items:
+            type: string
+        subject:
+          type: string
+        html:
+          type: [string, "null"]
+        text:
+          type: [string, "null"]
+        cc:
+          type: [array, "null"]
+          items:
+            type: string
+        bcc:
+          type: [array, "null"]
+          items:
+            type: string
+        reply_to:
+          type: [array, "null"]
+          items:
+            type: string
+        created_at:
+          type: string
+          description: Creation time, for example `2026-10-14 21:55:40.924000+00`.
+        scheduled_at:
+          type: [string, "null"]
+        message_id:
+          type: string
+        last_event:
+          type: string
+          description: Most recent delivery event. Values include `sent`, `delivered`, `delivery_delayed`, `bounced`, `complained` and `opened`.
+    Error:
+      type: object
+      required: [statusCode, name, message]
+      properties:
+        statusCode:
+          type: integer
+        name:
+          type: string
+          description: Error category. Different problems can share the same name.
+        message:
+          type: string
+  responses:
+    InvalidApiKey:
+      description: The API key is invalid.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            statusCode: 401
+            name: validation_error
+            message: API key is invalid
+    DomainNotVerified:
+      description: The `from` address uses a domain that is not verified.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            statusCode: 403
+            name: validation_error
+            message: The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains
+    MissingField:
+      description: A required field is missing.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            statusCode: 422
+            name: validation_error
+            message: Missing `subject` field.
+    NotFound:
+      description: No email exists with the given ID.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            statusCode: 404
+            name: not_found
+            message: Email not found
+    RateLimited:
+      description: Rate limit exceeded (default 2 requests per second per team).
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
