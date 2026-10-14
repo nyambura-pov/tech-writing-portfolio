@@ -12,7 +12,7 @@
         <link rel="prev" href="../insight/developer-guide/">
       
       
-        <link rel="next" href="../troubleshooting-runbooks/">
+        <link rel="next" href="batch-emails/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Resend Email API - Faith Njuguna | Technical Writer</title>
+        <title>Quickstart - Faith Njuguna | Technical Writer</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resend-email-api-developer-onboarding-reference-guide" class="md-skip">
+        <a href="#send-your-first-email-with-the-resend-api" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Resend Email API
+              Quickstart
             
           </span>
         </div>
@@ -493,7 +493,7 @@
   <span class="md-ellipsis">
     
   
-    Resend Email API
+    Quickstart
   
 
     
@@ -511,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    Resend Email API
+    Quickstart
   
 
     
@@ -537,10 +537,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-overview-architecture" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Overview &amp; architecture
+        Before you begin
       
     </span>
   </a>
@@ -548,10 +548,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-authentication-prerequisites" class="md-nav__link">
+  <a href="#set-your-api-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Authentication &amp; prerequisites
+        Set your API key
       
     </span>
   </a>
@@ -559,10 +559,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-5-minute-quickstart" class="md-nav__link">
+  <a href="#step-1-send-an-email" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 5-minute quickstart
+        Step 1: Send an email
       
     </span>
   </a>
@@ -570,60 +570,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-endpoints-reference" class="md-nav__link">
+  <a href="#step-2-confirm-the-response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Endpoints reference
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Endpoints reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-send-a-single-email-post-emails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Send a single email (POST /emails)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-retrieve-email-delivery-status-get-emailsid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Retrieve email delivery status (GET /emails/{id})
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-send-batch-emails-post-emailsbatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Send batch emails (POST /emails/batch)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-status-codes-error-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Status codes &amp; error catalog
+        Step 2: Confirm the response
       
     </span>
   </a>
@@ -631,10 +581,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-rate-limits-best-practices" class="md-nav__link">
+  <a href="#step-3-check-delivery-status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Rate limits &amp; best practices
+        Step 3: Check delivery status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
       
     </span>
   </a>
@@ -645,6 +617,90 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="batch-emails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Send batch emails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error Codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -743,8 +799,15 @@
 
               
             
-              
-                
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -766,14 +829,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -805,10 +860,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-overview-architecture" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Overview &amp; architecture
+        Before you begin
       
     </span>
   </a>
@@ -816,10 +871,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-authentication-prerequisites" class="md-nav__link">
+  <a href="#set-your-api-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Authentication &amp; prerequisites
+        Set your API key
       
     </span>
   </a>
@@ -827,10 +882,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-5-minute-quickstart" class="md-nav__link">
+  <a href="#step-1-send-an-email" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 5-minute quickstart
+        Step 1: Send an email
       
     </span>
   </a>
@@ -838,60 +893,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-endpoints-reference" class="md-nav__link">
+  <a href="#step-2-confirm-the-response" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Endpoints reference
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Endpoints reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-send-a-single-email-post-emails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Send a single email (POST /emails)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-retrieve-email-delivery-status-get-emailsid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Retrieve email delivery status (GET /emails/{id})
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-send-batch-emails-post-emailsbatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Send batch emails (POST /emails/batch)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-status-codes-error-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Status codes &amp; error catalog
+        Step 2: Confirm the response
       
     </span>
   </a>
@@ -899,10 +904,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-rate-limits-best-practices" class="md-nav__link">
+  <a href="#step-3-check-delivery-status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Rate limits &amp; best practices
+        Step 3: Check delivery status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
       
     </span>
   </a>
@@ -926,32 +953,242 @@
 
 
 
-<h1 id="resend-email-api-developer-onboarding-reference-guide">Resend Email API: Developer Onboarding &amp; Reference Guide</h1>
-<p>A complete developer integration guide and OpenAPI-aligned reference for the Resend transactional email platform.</p>
-<h2 id="1-overview-architecture">1. Overview &amp; architecture</h2>
-<!-- Brief explanation of Resend, transactional messaging, and the REST architecture -->
-
-<h2 id="2-authentication-prerequisites">2. Authentication &amp; prerequisites</h2>
-<!-- How to get an API key, header formatting (Bearer token), and security practices -->
-
-<h2 id="3-5-minute-quickstart">3. 5-minute quickstart</h2>
-<!-- Copyable cURL and Python snippets for zero-to-first-successful-email -->
-
-<h2 id="4-endpoints-reference">4. Endpoints reference</h2>
-<h3 id="41-send-a-single-email-post-emails">4.1 Send a single email (<code>POST /emails</code>)</h3>
-<!-- Parameter table, payload requirements, and example request/response -->
-
-<h3 id="42-retrieve-email-delivery-status-get-emailsid">4.2 Retrieve email delivery status (<code>GET /emails/{id}</code>)</h3>
-<!-- Path parameters, response fields, and status state machine -->
-
-<h3 id="43-send-batch-emails-post-emailsbatch">4.3 Send batch emails (<code>POST /emails/batch</code>)</h3>
-<!-- Array payload structure, batch limits, and bulk response arrays -->
-
-<h2 id="5-status-codes-error-catalog">5. Status codes &amp; error catalog</h2>
-<!-- 200, 401, 422, 429 explanation and structured error schemas -->
-
-<h2 id="6-rate-limits-best-practices">6. Rate limits &amp; best practices</h2>
-<!-- Header inspection, exponential backoff, and production recommendations -->
+<h1 id="send-your-first-email-with-the-resend-api">Send your first email with the Resend API</h1>
+<div class="admonition info">
+<p class="admonition-title">Independent sample</p>
+<p>This is an independent documentation sample written for a technical
+writing portfolio. It is not official Resend documentation.</p>
+</div>
+<p><strong>Time to complete:</strong> about 5 minutes</p>
+<p>In this quickstart, you will:</p>
+<ul>
+<li>Set your API key as an environment variable.</li>
+<li>Send a test email with cURL or Python.</li>
+<li>Capture the email <code>id</code> from the response.</li>
+<li>Check the delivery status of your email.</li>
+</ul>
+<p>Resend exposes a REST API over HTTPS. Requests and responses use JSON, and
+every request is authenticated with a Bearer token.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base URL</td>
+<td><code>https://api.resend.com</code></td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td><code>Authorization: Bearer &lt;API key&gt;</code></td>
+</tr>
+<tr>
+<td>Content type</td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td>Default rate limit</td>
+<td>2 requests per second per team</td>
+</tr>
+</tbody>
+</table>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>You need:</p>
+<ol>
+<li>A <a href="https://resend.com">Resend account</a>.</li>
+<li>An API key. In the Resend dashboard, go to <strong>API Keys</strong> and create a key
+   with <strong>Full access</strong>. Keys start with <code>re_</code>. Copy the key right away,
+   because Resend shows it only once.</li>
+<li>A sender address. To test without a custom domain, use
+   <code>onboarding@resend.dev</code>.</li>
+<li>For the Python examples, Python 3 and the <code>requests</code> library
+   (<code>pip install requests</code>).</li>
+</ol>
+<h2 id="set-your-api-key">Set your API key</h2>
+<p>Store your key in an environment variable so it never ends up in source
+control. Run the command in the same terminal window you will use for the
+next steps. The variable lasts only for that window, so set it again if you
+open a new one.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux / macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">RESEND_API_KEY</span><span class="o">=</span><span class="s2">&quot;re_your_api_key&quot;</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="nv">$env:RESEND_API_KEY</span><span class="p">=</span><span class="s2">&quot;re_your_api_key&quot;</span>
+</code></pre></div>
+<h2 id="step-1-send-an-email">Step 1: Send an email</h2>
+<p>The recipient <code>delivered@resend.dev</code> is a Resend test address that simulates
+a successful delivery, so you don't need a real inbox.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">cURL (Linux / macOS)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://api.resend.com/emails<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$RESEND_API_KEY</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s1">        &quot;from&quot;: &quot;Acme &lt;onboarding@resend.dev&gt;&quot;,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s1">        &quot;to&quot;: [&quot;delivered@resend.dev&quot;],</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s1">        &quot;subject&quot;: &quot;Hello from the Resend API&quot;,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="s1">        &quot;html&quot;: &quot;&lt;p&gt;Congrats on sending your first email with &lt;strong&gt;Resend&lt;/strong&gt;!&lt;/p&gt;&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s1">      }&#39;</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Save this as <code>send_email.py</code>, then run <code>python send_email.py</code>.</p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;RESEND_API_KEY&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">api_key</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="s2">&quot;Set the RESEND_API_KEY environment variable first.&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="s2">&quot;https://api.resend.com/emails&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>            <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>            <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="p">},</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;Acme &lt;onboarding@resend.dev&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;delivered@resend.dev&quot;</span><span class="p">],</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello from the Resend API&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Congrats on sending your first email with &lt;strong&gt;Resend&lt;/strong&gt;!&lt;/p&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="p">},</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Using Windows PowerShell?</p>
+<p>PowerShell's <code>curl</code> is an alias for a different command. Use the Python
+example, or run <code>curl.exe</code> with backtick (<code>`</code>) line continuations.</p>
+</div>
+<h2 id="step-2-confirm-the-response">Step 2: Confirm the response</h2>
+<p>A successful request returns <code>200 OK</code> and the ID of your email:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01a13c69-fa51-7d25-9158-ef0e1ac508a7&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Save the email ID</p>
+<p>You need the <code>id</code> to check delivery status in the next step.</p>
+</div>
+<p>A <code>200</code> response means Resend accepted the email for delivery. It doesn't
+mean the email has arrived yet. The next step checks that.</p>
+<h2 id="step-3-check-delivery-status">Step 3: Check delivery status</h2>
+<p>Send a <code>GET</code> request to <code>/emails/{id}</code>. Replace the ID below with yours.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">cURL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>curl<span class="w"> </span>https://api.resend.com/emails/01a13c69-fa51-7d25-9158-ef0e1ac508a7<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">      </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$RESEND_API_KEY</span><span class="s2">&quot;</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Save this as <code>get_email.py</code>, then run
+<code>python get_email.py YOUR_EMAIL_ID</code>.</p>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="s2">&quot;Usage: python get_email.py &lt;email_id&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="sa">f</span><span class="s2">&quot;https://api.resend.com/emails/</span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;RESEND_API_KEY&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<p>Example response:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01a13c69-fa51-7d25-9158-ef0e1ac508a7&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;delivered@resend.dev&quot;</span><span class="p">],</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Acme &lt;onboarding@resend.dev&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-10-14 21:55:40.924000+00&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello from the Resend API&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nt">&quot;bcc&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="nt">&quot;cc&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="nt">&quot;reply_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="nt">&quot;last_event&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;delivered&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="nt">&quot;scheduled_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="nt">&quot;message_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;010001a13c69fbd4-f6c90015-97e9-4569-93cf-c5b787ae658f-000000@email.amazonses.com&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">  </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Congrats on sending your first email with &lt;strong&gt;Resend&lt;/strong&gt;!&lt;/p&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Congrats on sending your first email with Resend!&quot;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
+</code></pre></div>
+<p><code>last_event</code> shows the most recent delivery event. For test addresses like
+<code>delivered@resend.dev</code>, it can read <code>delivered</code> almost immediately. For other
+recipients, it may read <code>sent</code> first. Run the request again after a few
+seconds to see the update.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>401</code></td>
+<td>Missing or invalid API key</td>
+<td>Check that <code>RESEND_API_KEY</code> is set in this terminal window and copied in full.</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>The <code>from</code> domain isn't verified</td>
+<td>Use <code>onboarding@resend.dev</code>, or verify your domain in the dashboard.</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>No email with that ID</td>
+<td>Check that the <code>id</code> is copied correctly.</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td>A required field is missing</td>
+<td>Read <code>message</code>, which names the missing field.</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Rate limit exceeded</td>
+<td>Limit requests to 2 per second, then retry.</td>
+</tr>
+</tbody>
+</table>
+<p>For the full list, see <a href="errors/">Error codes</a>.</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="batch-emails/">Send batch emails</a></li>
+<li><a href="reference/">API reference</a></li>
+<li><a href="errors/">Error codes</a></li>
+</ul>
 
 
 
