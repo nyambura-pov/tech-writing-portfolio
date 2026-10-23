@@ -49,6 +49,7 @@ open a new one.
     export RESEND_API_KEY="re_your_api_key"
 ```
 
+
 === "Windows (PowerShell)"
 
 ```powershell
