@@ -1,25 +1,25 @@
-# Case study: documenting the InSight clinical decision-support system
+# Documenting InSight for two audiences
 
-How I organized documentation for two different audiences of one computer-vision cataract triage tool.
+InSight is a cataract screening tool I built as my final-year computer science project. This case study explains how I documented it for clinic staff and for developers.
 
 ## Summary
 
-| | |
+| Item | Details |
 |---|---|
 | **Project** | InSight cataract screening application |
-| **Role** | Sole technical writer and documentation engineer |
+| **My role** | Built the system and wrote all of the documentation |
 | **Deliverables** | System overview, clinical operator guide, developer and API guide, OpenAPI specification |
 | **Tools and standards** | MkDocs Material, Markdown, OpenAPI, Google Developer Documentation Style Guide, Git, GitHub Actions |
 | **Audiences** | Frontline healthcare workers (operators) and software engineers (maintainers) |
 
 ## 1. The problem
 
-InSight is a machine learning tool that screens eye (fundus) photographs for signs of cataracts in low-resource clinics. The PyTorch model and FastAPI backend worked, but there was no documentation:
+InSight screens eye (fundus) photographs for signs of cataracts. It uses a PyTorch model and a FastAPI backend and is meant for low-resource clinics. The system worked, but nothing in it would let anyone else use it:
 
-* **Operators** had no instructions for capturing and uploading images, or for reading confidence scores and Grad-CAM heatmaps.
-* **Engineers** had no API specification, dependency map, or local setup guide.
+* **Clinic staff** needed instructions for uploading images and for reading confidence scores and Grad-CAM heatmaps.
+* **Developers** needed an API specification, a dependency overview, and a local setup guide.
 
-The challenge was to document one product for two audiences with opposite needs, without confusing either.
+The challenge was to write for two audiences with opposite needs without confusing either.
 
 ## 2. The audiences
 
@@ -44,10 +44,11 @@ InSight documentation
     └── Setup, endpoints, error contracts, schemas
 ```
 
-Two decisions shaped the structure:
+Three decisions shaped the structure:
 
 * **Visible medical disclaimers.** Warning callouts state that InSight is a decision-support aid, not a diagnostic authority.
 * **Separation of concerns.** Model details such as ResNet-18 weights and learning rates stay in the developer guide, so operators never meet them.
+* **Writing about my own code.** Knowing the system well meant I could check each statement against the code. It also meant I had to guard against skipping steps that felt obvious to me, which is part of why the operator guide has no code or model terminology.
 
 ## 4. Editorial and technical approach
 
@@ -65,8 +66,8 @@ Two decisions shaped the structure:
 
 ## 5. Outcomes
 
-The following are design outcomes:
+These are design outcomes, not measured results:
 
 * **Lower cognitive load for operators.** The workflow is presented as four visual steps with no code or command-line syntax.
-* **Faster developer onboarding.** Copyable cURL commands let an engineer start the container and run a test prediction against `/predict`.
+* **Faster developer onboarding.** Copyable cURL commands let an engineer start the services and run a test prediction against `/predict`.
 * **Maintainable docs.** Changes go through pull requests, the same as application code.

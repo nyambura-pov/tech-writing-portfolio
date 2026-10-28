@@ -1,10 +1,10 @@
-# Case study: developer onboarding and diagnostics for the Resend API
+# Documenting an email API, from first call to first failure
 
 How I structured a quickstart, reference, and troubleshooting set for a transactional email API, and verified it against the live service.
 
 ## Summary
 
-| | |
+| Item | Details |
 |---|---|
 | **Project** | Resend API documentation sample |
 | **Role** | Technical writer and documentation engineer |

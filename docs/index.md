@@ -1,57 +1,64 @@
 # Faith Njuguna
 
-I'm a technical writer and documentation engineer with a background in computer science. I specialize in developer-facing documentation: REST API references, architecture guides, and docs-as-code workflows that help engineers build, integrate, and troubleshoot systems.
+Technical writer and documentation engineer
 
-**Currently seeking:** technical writer and documentation engineer roles. Open to remote work.
+I'm a technical writer with a computer science degree. I write for developers and for the people who use the software they build. This portfolio has three pieces: documentation for a clinical AI tool I built, a set of API docs for an email service, and a troubleshooting guide. I tested the examples in these docs against the running systems.
 
-I built this portfolio with MkDocs Material and Markdown. I manage it in Git and deploy it with GitHub Pages.
+I'm looking for a full-time, remote technical writer or documentation engineer role.
 
-## Featured work
+[Download my resume](assets/Faith_Njuguna_Resume.pdf){ .md-button .md-button--primary }
+[Contact me](contact.md){ .md-button }
 
-### [InSight clinical decision support documentation](insight/insight.md)
+## Selected work
 
-Developer onboarding, a clinical operator guide, and an API reference for an AI-driven cataract screening service.
+### InSight: documentation for a clinical AI tool
 
-* **The problem:** Clinical AI tools often run as opaque systems with isolated scripts. They lack reproducible local setups and clear interface contracts for integration engineers.
-* **What I built:**
-    * A developer quickstart that covers environment isolation and local service startup.
-    * An architecture overview that explains the pre-validation gate and Grad-CAM heatmaps.
-    * An endpoint reference for `POST /predict/` with multipart request examples in cURL and Python, binary image handling, and documented `422` and `500` error responses.
-    * A clinical operator guide that walks nurses through screening, Grad-CAM interpretation, and referral report export.
-* **My process:** I analyzed the PyTorch inference engine and the FastAPI backend. I verified request and response cycles with cURL and Postman. I wrote separate paths for clinical and engineering audiences.
-* **Skills shown:** API reference design, architecture documentation, error state documentation, and Markdown.
+InSight screens retinal photographs for signs of cataracts. I built it as my final-year computer science project, then wrote the documentation for the two groups who would use it: clinic staff and developers.
 
-### [Public API documentation: Resend Email API](resend/index.md)
+* A clinical operator guide that covers screening, reading the Grad-CAM heatmaps that show what influenced a result, and exporting referral reports.
+* A developer guide with local setup and a reference for `POST /predict/`, with cURL and Python examples and the `422` and `500` errors.
+* A system overview with the architecture and a clinical-use disclaimer.
 
-Status: in progress.
+Because I wrote the code, I could check every statement against it, and I ran the API requests with cURL and Postman. I kept model details in the developer guide and out of the operator guide.
 
-A developer onboarding suite and OpenAPI-aligned reference for the Resend transactional email platform.
+[Overview](insight/insight.md) · [Operator guide](insight/user-guide.md) · [Developer guide](insight/developer-guide.md) · [Case study](insight/case-study.md)
 
-* **Target scope:** OpenAPI 3.0 specification authoring, Bearer token authentication, multi-language code samples (cURL and Python), and structured error schemas.
-* **Focus:** The "zero to first successful call" journey, complete parameter definitions, and transactional email status lifecycle.
-* **Skills shown:** REST API documentation, OpenAPI (OAS 3.0), Swagger tooling, developer quickstarts, and schema definition.
+### Resend API: quickstart, reference, and OpenAPI spec
 
-### [Production troubleshooting and runbooks](troubleshooting-runbooks.md)
+An independent documentation sample for Resend, a transactional email API. I'm not affiliated with Resend. The set covers sending an email, sending a batch, and checking delivery status.
 
-Status: in progress.
+* A quickstart with cURL and Python examples, from creating an API key to checking delivery status.
+* An API reference and a batch-sending guide.
+* An error catalog with retry guidance.
+* An OpenAPI 3.1 specification.
 
-A diagnostic runbook that helps engineers identify, isolate, and resolve production errors.
+I ran every request against the live API and corrected my drafts where the real responses differed. Empty fields came back as `null` instead of empty arrays, and three different errors shared the name `validation_error`, so the error docs tell readers to check the status code and message as well.
 
-* **Target scope:** Root cause analysis templates, an error code catalog, and remediation steps.
+[Quickstart](resend/index.md) · [API reference](resend/reference.md) · [Error codes](resend/errors.md) · [Case study](resend/api-case-study.md)
 
-## How I approach documentation
+### Troubleshooting guide for the Resend API
 
-* **Engineering empathy:** Documentation should answer practical questions quickly. What is this service? How do I authenticate? What does a valid request look like? Why did my request fail?
-* **Docs-as-code:** I keep documentation close to the source code. I author it in Markdown, manage it in Git, review it with peers, and publish it through continuous integration.
-* **Cross-functional verification:** I interview subject matter experts (SMEs), compare requirements against QA test cases, and run commands locally to verify behavior before publishing.
+A guide for when an API call fails. It opens with a table that matches a symptom (`401`, `403`, `404`, `422`, `429`, or a webhook that never arrives) to the section that explains the fix.
 
-## Core tooling
+* Real error messages for `401`, `403`, `404`, and `422`, reproduced against the live API.
+* DNS checks for domain verification, with commands for Linux/macOS and PowerShell.
+* Webhook signature verification examples in Node.js and Python.
+* A checklist of what to collect before contacting support.
 
-* **Documentation and markup:** Markdown, OpenAPI (Swagger), MkDocs Material, Git, GitHub, docs-as-code.
-* **Technical foundation:** REST APIs, Postman, Python (FastAPI, PyTorch), HTTP status codes, Linux command line.
+Sections I haven't tested yet are noted in the case study.
 
-## Connect
+[Troubleshooting guide](resend/troubleshooting.md) · [Case study](resend/troubleshooting-case-study.md)
 
-* **GitHub:** [github.com/nyambura-pov](https://github.com/nyambura-pov)
-* **LinkedIn:** [linkedin.com/in/faith-njugunaaa](https://www.linkedin.com/in/faith-njugunaaa)
-* **Community:** Member of the Write the Docs community.
+## How I work
+
+* **I test what I write.** I run the commands and API calls before I publish them, and I fix the docs when the system behaves differently from my draft.
+* **I organize by what the reader is doing.** Getting started, looking something up, and fixing a problem need different pages.
+* **I keep docs in the same workflow as code.** Markdown in Git, built with MkDocs Material, published to GitHub Pages, and written to the Google Developer Documentation Style Guide.
+
+## Tools
+
+Markdown, MkDocs Material, Git and GitHub, OpenAPI, REST APIs, cURL, Postman, Python (FastAPI), and the Linux and PowerShell command lines.
+
+## Contact
+
+[faith.njuguna.cse@gmail.com](mailto:faith.njuguna.cse@gmail.com) · [LinkedIn](https://www.linkedin.com/in/faith-njugunaaa) · [GitHub](https://github.com/nyambura-pov)

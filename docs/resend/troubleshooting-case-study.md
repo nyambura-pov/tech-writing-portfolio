@@ -1,13 +1,13 @@
-# Case study: writing a symptom-first troubleshooting guide
+# Writing a troubleshooting guide for readers who are mid-problem
 
 How I designed a troubleshooting guide that helps a developer find and fix a failure quickly.
 
 ## Summary
 
-| | |
+| Item | Details |
 |---|---|
 | **Project** | Troubleshooting guide for the Resend API |
-| **Artifact** | `docs/resend/troubleshooting.md` (the InSight runbook is in `docs/troubleshooting-runbooks.md`) |
+| **Artifact** | `docs/resend/troubleshooting.md` |
 | **Role** | Technical writer and documentation engineer |
 | **Contents** | Triage table, error runbooks, DNS checks, webhook handlers, support checklist, glossary |
 | **Tools** | Markdown, MkDocs Material, `dig`, PowerShell `Resolve-DnsName`, Node.js (Express), Python (FastAPI) |

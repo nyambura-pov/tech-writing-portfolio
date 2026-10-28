@@ -10,7 +10,7 @@ documentation, I'd like to hear from you.
 
 ## Get in touch
 
-| | |
+| Channel | Details |
 |---|---|
 | **Email** | [faith.njuguna.cse@gmail.com](mailto:faith.njuguna.cse@gmail.com) |
 | **LinkedIn** | [linkedin.com/in/faith-njugunaaa](https://www.linkedin.com/in/faith-njugunaaa) |
@@ -22,7 +22,7 @@ in this portfolio.
 
 ## Selected work
 
-* [**Insight**](insight/insight.md): user guide, developer guide, and OpenAPI
+* [**InSight**](insight/insight.md): user guide, developer guide, and OpenAPI
   specification.
 * [**Resend API sample**](resend/index.md): quickstart, API reference, batch
   guide, and error handling.

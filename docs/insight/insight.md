@@ -43,19 +43,19 @@ cd InSight_Cataract_Detection
 
 === "Linux / macOS"
 
-```bash
+    ```bash
     python3 -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
-```
+    ```
 
 === "Windows (PowerShell)"
 
-```powershell
+    ```powershell
     python -m venv .venv
     .venv\Scripts\Activate.ps1
     pip install -r requirements.txt
-```
+    ```
 
 ### Configure credentials
 

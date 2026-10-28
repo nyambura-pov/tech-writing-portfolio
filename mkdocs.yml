@@ -1,39 +1,68 @@
 site_name: Faith Njuguna | Technical Writer
+site_url: https://nyambura-pov.github.io/tech-writing-portfolio/
+site_description: Portfolio of Faith Njuguna, technical writer and documentation engineer.
+site_author: Faith Njuguna
+repo_url: https://github.com/nyambura-pov/tech-writing-portfolio
+repo_name: nyambura-pov/tech-writing-portfolio
 
 theme:
   name: material
   palette:
-    primary: indigo
-    accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
     - content.code.copy
     - content.tabs.link
 
+plugins:
+  - search
+
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.tabbed:
-      alternate_style: true       
+      alternate_style: true
 
 nav:
   - Home: index.md
-  - Projects:
-       - InSight clinical decision support:
-           - Overview: insight/insight.md
-           - Process case study: insight/case-study.md
-           - Clinical operator guide: insight/user-guide.md
-           - Developer and API guide: insight/developer-guide.md
-       - Public API documentation:
-           - Quickstart: resend/index.md
-           - Send batch emails: resend/batch-emails.md
-           - API reference: resend/reference.md
-           - Process case study: resend/api-case-study.md
-           - Error Codes: resend/errors.md
-           - Troubleshooting: resend/troubleshooting.md
-           - Process case study: resend/troubleshooting-case-study.md
-  - Contact & Resume: contact.md   
+  - InSight:
+      - How I documented InSight: insight/case-study.md
+      - Overview: insight/insight.md
+      - Clinical operator guide: insight/user-guide.md
+      - Developer and API guide: insight/developer-guide.md
+      - OpenAPI specification: https://github.com/nyambura-pov/tech-writing-portfolio/blob/main/specs/insight-openapi.yaml
+  - Resend API documentation:
+      - How I documented the Resend API: resend/api-case-study.md
+      - Quickstart: resend/index.md
+      - Send batch emails: resend/batch-emails.md
+      - API reference: resend/reference.md
+      - Error codes: resend/errors.md
+      - OpenAPI specification: https://github.com/nyambura-pov/tech-writing-portfolio/blob/main/specs/resend-openapi.yaml
+  - Troubleshooting guide:
+      - How I wrote the troubleshooting guide: resend/troubleshooting-case-study.md
+      - Troubleshooting guide: resend/troubleshooting.md
+  - Contact and resume: contact.md
