@@ -14,7 +14,7 @@ InSight is a cataract screening tool I built as my final-year computer science p
 
 ## 1. The problem
 
-InSight screens eye (fundus) photographs for signs of cataracts. It uses a PyTorch model and a FastAPI backend and is meant for low-resource clinics. The system worked, but nothing in it would let anyone else use it:
+InSight screens eye (fundus) photographs for signs of cataracts. It uses a PyTorch model and a FastAPI backend and is meant for low-resource clinics. The system worked and required the following guiding documentation: 
 
 * **Clinic staff** needed instructions for uploading images and for reading confidence scores and Grad-CAM heatmaps.
 * **Developers** needed an API specification, a dependency overview, and a local setup guide.

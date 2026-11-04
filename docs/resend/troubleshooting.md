@@ -79,7 +79,7 @@ set in the terminal window you're running the command from.
 one terminal window isn't available in another.
 
 **Step 3.** If the key is set, create a new key in the dashboard under
-**API Keys** and replace the old one. Don't commit API keys to Git.
+**API Keys** and replace the old one. Do not commit API keys to Git.
 
 ### 403: Domain is not verified
 
@@ -94,7 +94,7 @@ one terminal window isn't available in another.
 ```
 
 **Cause:** The `from` address uses a domain that hasn't been verified for
-your account. You can't send from domains you don't control, such as
+your account. You can not send from domains you do not control, such as
 `gmail.com`.
 
 **Fix**
@@ -331,7 +331,7 @@ following before you contact support:
 * The `statusCode`, `name`, and `message` from the error.
 * The request you sent, with the API key removed.
 
-Don't share your API key or webhook signing secret with anyone, including
+Do not share your API key or webhook signing secret with anyone, including
 support.
 
 ## Glossary
@@ -343,7 +343,7 @@ support.
 | **DKIM** | A cryptographic signature added to each email and verified against a public key in DNS. |
 | **DNS** | The system that maps domain names to the records published for them. |
 | **HMAC** | A code computed from a message and a shared secret, used to verify the sender and detect changes. |
-| **Idempotency key** | A unique value sent with a request so that retries don't create duplicates. |
+| **Idempotency key** | A unique value sent with a request so that retries do not create duplicates. |
 | **Propagation** | The time a DNS change takes to become visible across the internet. |
 | **Rate limit** | The maximum number of requests allowed in a given period. |
 | **SPF** | A DNS record that lists the servers allowed to send email for a domain. |

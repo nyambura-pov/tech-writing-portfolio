@@ -59,7 +59,7 @@ open a new one.
 ## Step 1: Send an email
 
 The recipient `delivered@resend.dev` is a Resend test address that simulates
-a successful delivery, so you don't need a real inbox.
+a successful delivery, so you do not need a real inbox.
 
 === "cURL (Linux / macOS)"
 

@@ -35,7 +35,7 @@ To run the inference backend and the clinician dashboard locally, follow these s
 ### Clone the repository
 
 ```bash
-git clone https://github.com/nyambura-pov/InSight_Cataract_Detection.git
+git clone https://github.com/is-project-4th-year/InSight_Cataract_Detection/tree/main
 cd InSight_Cataract_Detection
 ```
 
@@ -101,7 +101,7 @@ The ResNet-18 model was trained on the Ocular Disease Intelligent Recognition (O
 | AUC-ROC | 0.998 | How well the model separates cataract from non-cataract images across all decision thresholds. |
 
 !!! note "Scope of these results"
-    These results come from one held-out split of a single public dataset. They don't measure performance on images from other cameras, populations, or clinical settings.
+    These results come from one held-out split of a single public dataset. They do not measure performance on images from other cameras, populations, or clinical settings.
 
 ## Related documentation
 

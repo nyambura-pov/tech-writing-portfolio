@@ -28,8 +28,8 @@ To ensure accurate screening and prevent processing errors, fundus photographs m
 
 After a scan meets the intake standards, screen it using the following workflow.
 
-1. In the left sidebar, go to **Patient Screening** > **Single Scan**.
-2. In the **Patient Identifier** field, enter the assigned patient ID (for example, `PAT-2026-0841`). Don't enter personal details such as names or national identity numbers.
+1. In the left sidebar, go to **Screening**.
+2. In the **Patient Identifier** field, enter the assigned patient ID (for example, `PAT-2026-0841`). Do not enter personal details such as names or national identity numbers.
 3. Select **Browse Files**, or drag and drop the file, to upload the retinal fundus image.
 
 ![InSight Scan Acquisition Interface](../assets/insight-intake-screen.png)

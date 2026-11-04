@@ -114,7 +114,7 @@ Returned when the scan is classified, the Grad-CAM map is generated, and the pat
 
 ### `422 Unprocessable Entity`: missing or invalid payload
 
-FastAPI returns this automatically if required form fields are missing, or if field data types don't match, for example, if you pass a string for `age`.
+FastAPI returns this automatically if required form fields are missing, or if field data types do not match, for example, if you pass a string for `age`.
 
 ```json
 {

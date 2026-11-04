@@ -19,7 +19,7 @@ How I structured a quickstart, reference, and troubleshooting set for a transact
 Email APIs have predictable failure points for new developers:
 
 * **Slow onboarding.** Long setup and unclear prerequisites delay the first successful request.
-* **Schema guesswork.** If the docs don't say whether `to` takes a string or an array, readers hit `422` errors.
+* **Schema guesswork.** If the docs do not say whether `to` takes a string or an array, readers hit `422` errors.
 * **Silent failures.** Missing DNS records, rate limits, and webhook signature mismatches fail in ways that are hard to trace.
 
 The goal was a documentation set and OpenAPI specification that lets a developer authenticate, send an email, check its delivery status, and fix common failures without help.
@@ -79,6 +79,6 @@ I ran the documented requests against the live API and corrected my drafts to ma
 The following are design outcomes:
 
 * A reader can configure a key, send an email, and check its status in one sitting without a custom domain.
-* The reference tables state types and allowed values, so readers don't have to guess at request formats.
+* The reference tables state types and allowed values, so readers do not have to guess at request formats.
 * The OpenAPI specification can be used to generate SDKs, run contract tests, and render interactive docs.
 
