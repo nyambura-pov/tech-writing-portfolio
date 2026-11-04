@@ -1487,7 +1487,7 @@
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Retry guidance</p>
-<p>A <code>500</code> response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request doesn't succeed if the underlying issue, such as a storage bucket misconfiguration, persists. Escalate to IT support if repeated <code>500</code> responses occur.</p>
+<p>A <code>500</code> response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request does not succeed if the underlying issue, such as a storage bucket misconfiguration, persists. Escalate to IT support if repeated <code>500</code> responses occur.</p>
 </div>
 <h2 id="database-side-effects">Database side effects</h2>
 <p>Every successful call to <code>POST /predict/</code> performs two database transactions:</p>

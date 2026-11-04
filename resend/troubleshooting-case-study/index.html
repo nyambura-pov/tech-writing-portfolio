@@ -1143,7 +1143,7 @@
 <ul>
 <li><strong>Organized by cause, not symptom.</strong> The reader sees <code>403 Domain is not verified</code> but must already know the root cause to find the right page.</li>
 <li><strong>Filler and condescension.</strong> Words like "simply," "just," and "obviously" add frustration without adding information.</li>
-<li><strong>Advice without commands.</strong> "Verify your keys" doesn't help without a command to run or code to copy.</li>
+<li><strong>Advice without commands.</strong> "Verify your keys" does not help without a command to run or code to copy.</li>
 </ul>
 <h2 id="2-structure">2. Structure</h2>
 <p>Each problem follows the same path:</p>
@@ -1163,7 +1163,7 @@ Instructions describe what the system does, not what the reader did wrong.</p>
 </ul>
 <p>Terms are defined once, in a sentence, where they first appear. There are no analogies or "in plain terms" boxes, because the readers are technical and mid-problem.</p>
 <p><strong>C. Commands for both platforms.</strong>
-DNS and environment checks show Linux/macOS and PowerShell side by side (<code>dig</code> and <code>Resolve-DnsName</code>), so a Windows engineer isn't told to run a Unix tool.</p>
+DNS and environment checks show Linux/macOS and PowerShell side by side (<code>dig</code> and <code>Resolve-DnsName</code>), so a Windows engineer is not told to run a Unix tool.</p>
 <p><strong>D. The raw-body webhook problem.</strong>
 Web frameworks parse JSON by default, which can change spacing or key order and break the HMAC signature. The guide shows how to read the unmodified body in Express (<code>express.raw()</code>) and FastAPI (<code>await request.body()</code>) and use a verification library.</p>
 <h2 id="4-escalation">4. Escalation</h2>

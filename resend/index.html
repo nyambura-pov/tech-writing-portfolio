@@ -1237,7 +1237,7 @@ example, or run <code>curl.exe</code> with backtick (<code>`</code>) line contin
 <p class="admonition-title">Save the email ID</p>
 <p>You need the <code>id</code> to check delivery status in the next step.</p>
 </div>
-<p>A <code>200</code> response means Resend accepted the email for delivery. It doesn't
+<p>A <code>200</code> response means Resend accepted the email for delivery. It does not
 mean the email has arrived yet. The next step checks that.</p>
 <h2 id="step-3-check-delivery-status">Step 3: Check delivery status</h2>
 <p>Send a <code>GET</code> request to <code>/emails/{id}</code>. Replace the ID below with yours.</p>
@@ -1310,7 +1310,7 @@ seconds to see the update.</p>
 </tr>
 <tr>
 <td><code>403</code></td>
-<td>The <code>from</code> domain isn't verified</td>
+<td>The <code>from</code> domain is not verified</td>
 <td>Use <code>onboarding@resend.dev</code>, or verify your domain in the dashboard.</td>
 </tr>
 <tr>

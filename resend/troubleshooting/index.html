@@ -1365,7 +1365,7 @@ section. Each section lists the symptom, the likely cause, and the fix.</p>
 </tr>
 <tr>
 <td><code>403</code> when sending</td>
-<td>The <code>from</code> domain isn't verified</td>
+<td>The <code>from</code> domain is not verified</td>
 <td>Check the domain status in the dashboard</td>
 <td><a href="#403-domain-is-not-verified">Domain not verified</a></td>
 </tr>
@@ -1423,7 +1423,7 @@ cause.</p>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API key is invalid&quot;</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>Cause:</strong> The key is wrong, was deleted, was copied incompletely, or isn't
+<p><strong>Cause:</strong> The key is wrong, was deleted, was copied incompletely, or is not
 set in the terminal window you're running the command from.</p>
 <p><strong>Fix</strong></p>
 <p><strong>Step 1.</strong> Check that the variable is set in the current window:</p>
@@ -1441,8 +1441,8 @@ set in the terminal window you're running the command from.</p>
 </div>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$env:RESEND_API_KEY</span><span class="p">)</span> <span class="p">{</span> <span class="s2">&quot;Key is set&quot;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s2">&quot;Key is NOT set&quot;</span> <span class="p">}</span>
 </span></code></pre></div>
-<p><strong>Step 2.</strong> If the key isn't set, set it again. An environment variable set in
-one terminal window isn't available in another.</p>
+<p><strong>Step 2.</strong> If the key is not set, set it again. An environment variable set in
+one terminal window is not available in another.</p>
 <p><strong>Step 3.</strong> If the key is set, create a new key in the dashboard under
 <strong>API Keys</strong> and replace the old one. Do not commit API keys to Git.</p>
 <h3 id="403-domain-is-not-verified">403: Domain is not verified</h3>
@@ -1520,7 +1520,7 @@ DKIM record name from your dashboard:</p>
 </div>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    <span class="nb">Resolve-DnsName</span> <span class="n">-Name</span> <span class="s2">&quot;resend._domainkey.yourdomain.com&quot;</span> <span class="n">-Type</span> <span class="n">TXT</span>
 </span></code></pre></div>
-<p><strong>Step 3.</strong> If the command returns nothing, the record isn't published yet or
+<p><strong>Step 3.</strong> If the command returns nothing, the record is not published yet or
 contains a typo.</p>
 <p><strong>Fix</strong></p>
 <ol>
@@ -1541,9 +1541,9 @@ polling <code>GET /emails/{id}</code> when you need to react to delivery events.
 <p><strong>Symptom:</strong> You registered a webhook, but your server receives nothing.</p>
 <p><strong>Likely causes</strong></p>
 <ul>
-<li>Your endpoint isn't reachable from the public internet, for example because
+<li>Your endpoint is not reachable from the public internet, for example because
   it runs only on <code>localhost</code>.</li>
-<li>Your endpoint doesn't have a valid HTTPS certificate.</li>
+<li>Your endpoint does not have a valid HTTPS certificate.</li>
 <li>Your endpoint responds slowly or returns an error status.</li>
 </ul>
 <p><strong>Fix</strong></p>
@@ -1568,9 +1568,9 @@ verification failed". That response comes from your code, not from Resend.</p>
 <ul>
 <li>Your framework parsed the JSON body before you verified it. Re-serializing
   parsed JSON can change spacing or key order, which changes the signature.</li>
-<li>The signing secret in your environment doesn't match the secret for this
+<li>The signing secret in your environment does not match the secret for this
   webhook endpoint. Signing secrets start with <code>whsec_</code>.</li>
-<li>The verification step doesn't receive the signature headers.</li>
+<li>The verification step does not receive the signature headers.</li>
 </ul>
 <p><strong>Fix</strong></p>
 <ol>
