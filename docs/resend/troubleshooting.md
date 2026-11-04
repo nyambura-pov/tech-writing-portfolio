@@ -16,7 +16,7 @@ section. Each section lists the symptom, the likely cause, and the fix.
 | Symptom | Likely cause | First check | Go to |
 |---|---|---|---|
 | `401` when sending or retrieving | The API key is invalid or not set | Confirm `RESEND_API_KEY` is set in this terminal window | [Invalid API key](#401-api-key-is-invalid) |
-| `403` when sending | The `from` domain isn't verified | Check the domain status in the dashboard | [Domain not verified](#403-domain-is-not-verified) |
+| `403` when sending | The `from` domain is not verified | Check the domain status in the dashboard | [Domain not verified](#403-domain-is-not-verified) |
 | `404` when retrieving an email | The email ID is wrong | Compare the ID with the one the send request returned | [Email not found](#404-email-not-found) |
 | `422` when sending | A required field is missing | Read `message`, which names the field | [Missing field](#422-missing-required-field) |
 | `429` on bursts of requests | The request rate exceeds 2 per second | Count your requests per second | [Rate limits](#rate-limits-429) |
@@ -56,7 +56,7 @@ The errors in this section were reproduced against the live API.
 }
 ```
 
-**Cause:** The key is wrong, was deleted, was copied incompletely, or isn't
+**Cause:** The key is wrong, was deleted, was copied incompletely, or is not
 set in the terminal window you're running the command from.
 
 **Fix**
@@ -75,8 +75,8 @@ set in the terminal window you're running the command from.
     if ($env:RESEND_API_KEY) { "Key is set" } else { "Key is NOT set" }
 ```
 
-**Step 2.** If the key isn't set, set it again. An environment variable set in
-one terminal window isn't available in another.
+**Step 2.** If the key is not set, set it again. An environment variable set in
+one terminal window is not available in another.
 
 **Step 3.** If the key is set, create a new key in the dashboard under
 **API Keys** and replace the old one. Do not commit API keys to Git.
@@ -179,7 +179,7 @@ DKIM record name from your dashboard:
     Resolve-DnsName -Name "resend._domainkey.yourdomain.com" -Type TXT
 ```
 
-**Step 3.** If the command returns nothing, the record isn't published yet or
+**Step 3.** If the command returns nothing, the record is not published yet or
 contains a typo.
 
 **Fix**
@@ -205,9 +205,9 @@ polling `GET /emails/{id}` when you need to react to delivery events.
 
 **Likely causes**
 
-* Your endpoint isn't reachable from the public internet, for example because
+* Your endpoint is not reachable from the public internet, for example because
   it runs only on `localhost`.
-* Your endpoint doesn't have a valid HTTPS certificate.
+* Your endpoint does not have a valid HTTPS certificate.
 * Your endpoint responds slowly or returns an error status.
 
 **Fix**
@@ -235,9 +235,9 @@ verification failed". That response comes from your code, not from Resend.
 
 * Your framework parsed the JSON body before you verified it. Re-serializing
   parsed JSON can change spacing or key order, which changes the signature.
-* The signing secret in your environment doesn't match the secret for this
+* The signing secret in your environment does not match the secret for this
   webhook endpoint. Signing secrets start with `whsec_`.
-* The verification step doesn't receive the signature headers.
+* The verification step does not receive the signature headers.
 
 **Fix**
 

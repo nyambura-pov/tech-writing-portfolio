@@ -263,7 +263,7 @@ A successful request returns `200 OK`:
 | `text` | string or null | The plain-text body. If you send only `html`, Resend generates this from it. |
 | `cc`, `bcc`, `reply_to` | array or null | The addresses supplied for each field. `null` if none were set. |
 | `created_at` | string | When the email was created, for example `2026-10-14 21:55:40.924000+00`. |
-| `scheduled_at` | string or null | When the email is scheduled to send. `null` if it isn't scheduled. |
+| `scheduled_at` | string or null | When the email is scheduled to send. `null` if it is not scheduled. |
 | `message_id` | string | The message ID assigned to the email. |
 | `last_event` | string | The most recent delivery event. Values include `sent`, `delivered`, `delivery_delayed`, `bounced`, `complained` and `opened`. |
 

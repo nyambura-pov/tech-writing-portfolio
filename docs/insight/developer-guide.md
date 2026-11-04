@@ -139,7 +139,7 @@ Returned if an unhandled exception occurs during tensor transformation, the mode
 ```
 
 !!! warning "Retry guidance"
-    A `500` response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request doesn't succeed if the underlying issue, such as a storage bucket misconfiguration, persists. Escalate to IT support if repeated `500` responses occur.
+    A `500` response indicates a server-side or infrastructure failure, not a client payload error. Retrying an identical request does not succeed if the underlying issue, such as a storage bucket misconfiguration, persists. Escalate to IT support if repeated `500` responses occur.
 
 ## Database side effects
 

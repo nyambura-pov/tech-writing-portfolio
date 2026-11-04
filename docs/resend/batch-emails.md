@@ -143,7 +143,7 @@ The response shows the second email from the batch:
 | Status | Likely cause | Fix |
 |---|---|---|
 | `401` | Missing or invalid API key | Check that `RESEND_API_KEY` is set in this terminal window and copied in full. |
-| `403` | A `from` domain isn't verified | Use `onboarding@resend.dev`, or verify your domain in the dashboard. |
+| `403` | A `from` domain is not verified | Use `onboarding@resend.dev`, or verify your domain in the dashboard. |
 | `422` | An email in the array has a missing or invalid field | Read `message`, which names the problem. Check every object in the array. |
 | `429` | Rate limit exceeded | Limit requests to 2 per second, then retry. |
 

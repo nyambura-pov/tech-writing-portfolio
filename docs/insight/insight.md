@@ -113,4 +113,4 @@ The ResNet-18 model was trained on the Ocular Disease Intelligent Recognition (O
 InSight is distributed under the MIT License.
 
 !!! warning "Clinical use disclaimer"
-    InSight is a clinical decision support system (CDSS) for frontline triage. It assists healthcare providers and doesn't replace diagnosis by a licensed ophthalmologist.
+    InSight is a clinical decision support system (CDSS) for frontline triage. It assists healthcare providers and does not replace diagnosis by a licensed ophthalmologist.

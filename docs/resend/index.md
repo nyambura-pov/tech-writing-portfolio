@@ -121,7 +121,7 @@ A successful request returns `200 OK` and the ID of your email:
 !!! note "Save the email ID"
     You need the `id` to check delivery status in the next step.
 
-A `200` response means Resend accepted the email for delivery. It doesn't
+A `200` response means Resend accepted the email for delivery. It does not
 mean the email has arrived yet. The next step checks that.
 
 ## Step 3: Check delivery status
@@ -187,7 +187,7 @@ seconds to see the update.
 | Status | Likely cause | Fix |
 |---|---|---|
 | `401` | Missing or invalid API key | Check that `RESEND_API_KEY` is set in this terminal window and copied in full. |
-| `403` | The `from` domain isn't verified | Use `onboarding@resend.dev`, or verify your domain in the dashboard. |
+| `403` | The `from` domain is not verified | Use `onboarding@resend.dev`, or verify your domain in the dashboard. |
 | `404` | No email with that ID | Check that the `id` is copied correctly. |
 | `422` | A required field is missing | Read `message`, which names the missing field. |
 | `429` | Rate limit exceeded | Limit requests to 2 per second, then retry. |

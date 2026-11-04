@@ -19,7 +19,7 @@ When something fails in production, the reader is stressed and wants a fix, not 
 
 * **Organized by cause, not symptom.** The reader sees `403 Domain is not verified` but must already know the root cause to find the right page.
 * **Filler and condescension.** Words like "simply," "just," and "obviously" add frustration without adding information.
-* **Advice without commands.** "Verify your keys" doesn't help without a command to run or code to copy.
+* **Advice without commands.** "Verify your keys" does not help without a command to run or code to copy.
 
 ## 2. Structure
 
@@ -46,7 +46,7 @@ Instructions describe what the system does, not what the reader did wrong.
 Terms are defined once, in a sentence, where they first appear. There are no analogies or "in plain terms" boxes, because the readers are technical and mid-problem.
 
 **C. Commands for both platforms.**
-DNS and environment checks show Linux/macOS and PowerShell side by side (`dig` and `Resolve-DnsName`), so a Windows engineer isn't told to run a Unix tool.
+DNS and environment checks show Linux/macOS and PowerShell side by side (`dig` and `Resolve-DnsName`), so a Windows engineer is not told to run a Unix tool.
 
 **D. The raw-body webhook problem.**
 Web frameworks parse JSON by default, which can change spacing or key order and break the HMAC signature. The guide shows how to read the unmodified body in Express (`express.raw()`) and FastAPI (`await request.body()`) and use a verification library.

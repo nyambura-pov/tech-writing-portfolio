@@ -101,7 +101,7 @@ Trigger an error on purpose to confirm your handling works:
 | To trigger | Do this | Result |
 |---|---|---|
 | Missing field | Omit the `subject` field. | `422` |
-| Invalid key | Set `RESEND_API_KEY` to a key that doesn't exist. | `401` |
+| Invalid key | Set `RESEND_API_KEY` to a key that does not exist. | `401` |
 | Unverified sender | Set `from` to an address at a domain you haven't verified. | `403` |
 | Unknown email | Request `GET /emails/00000000-0000-0000-0000-000000000000`. | `404` |
 
